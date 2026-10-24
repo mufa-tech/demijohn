@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>ABV Calculator for Wine, Mead and Cider (OG/FG)</title>
+<meta name="description" content="Alcohol from your original and final gravity, with the right formula for wine, mead or cider, temperature correction and sugar added mid-ferment.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preload" href="../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="ABV Calculator for Wine, Mead and Cider (OG/FG)">
+<meta property="og:description" content="Alcohol from your original and final gravity, with the right formula for wine, mead or cider, temperature correction and sugar added mid-ferment.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/abv/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Main"><a href="../calculators/" aria-current="page">Calculators</a><a href="../mead-for-beginners/">Mead guide</a><a href="../support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>EN</span></summary><nav aria-label="Language"><a href="../abv/" hreflang="en" lang="en" aria-current="true">English</a><a href="../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../">Demijohn</a> / <a href="../calculators/">Calculators</a></p>
+<h1>ABV calculator for wine, mead and cider</h1>
+<p class="lead">Type your original gravity and your latest reading. Demijohn uses the standard formula for grape, fruit and cider and the alternate formula for mead and sugar musts, and shows the others next to it.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>What are you making?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape" checked><span>Grape wine</span></label><label class="pill"><input type="radio" name="must" value="fruit"><span>Fruit wine</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cider or perry</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mead</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Sugar wine</span></label></div></fieldset>
+<div class="field "><label for="og">Original gravity (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.090" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Gravity scale"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="plato">°Plato</option><option value="oechsle">°Oechsle</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="og-hint">Measured before the yeast went in.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Final or current gravity</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0.996" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Your latest reading.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Readings taken warmer or colder than the hydrometer’s calibration?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Temperature at OG</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Temperature unit"><option value="C">°C</option><option value="F" selected>°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Temperature at this reading</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Hydrometer calibrated at</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20"><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555" checked><span>60 °F (15.6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Leave empty if the sample was at the calibration temperature.</p></details>
+<details class="more"><summary>Added sugar or honey after the OG reading?</summary>
+<div class="field-row two"><div class="field "><label for="add">Amount added in total</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Mass unit"><option value="g">g</option><option value="kg">kg</option><option value="oz">oz</option><option value="lb" selected>lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Batch volume at OG</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="5" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volume unit"><option value="L">litres</option><option value="usgal" selected>US gallons</option><option value="impgal">UK gallons</option></select></div>
+<span class="hint" id="vol-hint">Before the addition.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>What you added</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Sugar</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Honey</span></label></div></fieldset>
+<p class="small">Sugar or honey added later never shows in the OG, so the ABV from OG and FG alone comes out too low.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Result</h2>
+<div id="calc-nojs" class="callout"><p>This calculator needs JavaScript. The method below shows how to work it out by hand.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Runs in your browser. Nothing you type is sent or saved.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"en-US","decimal":".","units":{"volume":"usgal","temp":"F"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Grape wine","fruit":"Fruit wine","cider":"Cider or perry","mead":"Mead","sugar":"Sugar wine"},"sweet":{"sugar":"Sugar","honey":"Honey"},"unitNames":{"L":"litres","usgal":"US gallons","impgal":"UK gallons"},"disclaimer":"Doses are estimates. Add in steps, test again, follow the product label. For personal use only.","volPct":"% ABV","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warning","stop":"Stop","info":"Note","good":"OK"},"howTitle":"How it was calculated","sourceLabel":"Source","fillIn":"Fill in the fields to see the result.","fixErrors":"Fix the fields marked above to see the result.","errNumber":"Type a number, like {example}.","errRange":"Use a value from {min} to {max}.","errGravity":"On the {scale} scale this calculator works from {min} to {max}.","issues":{"outOfRange":"This is outside the range the formula is valid for.","invalidInput":"One of the values can’t be used here.","fgAboveOg":"The final reading is higher than the original gravity. Check both readings and the scale.","extrapolated":"Below 1.000 the Brix curve is extrapolated. Trust the SG figure.","formulasDisagree":"At this original gravity the formulas differ by more than 1 % ABV. Read the result as a range.","honeyMoistureUnusual":"That moisture is outside the 13.4 to 22.9 % found in honey surveys. Check the reading.","alreadyAboveTarget":"The must is already at or above this target. Nothing to add.","targetBelowCurrent":"The target is below the current gravity.","tempOut":"The {what} temperature is outside 0 to 40 °C (32 to 104 °F). Bring the sample to 15 to 25 °C and read again.","paOut":"That potential alcohol is beyond what a must can hold. Use a lower target."},"lowConfidence":"The {what} sample is outside 10 to 35 °C, so a simpler water-only correction is used. Bring the sample to 15 to 25 °C for a better reading.","potential":"Potential alcohol","highPa":"Above about 15 % most yeasts stop before the sugar is gone, so the result stays sweet.","stepFeed":"For mead, many makers add part of the honey at the start and the rest in steps. Log each addition: the ABV calculator counts it.","honeyAmount":"Honey","waterAmount":"Water","howTargetSugar":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L fermentable sugar, reached at {target} in a sugar or honey must.","howTargetOiv":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L sugar, which OIV Table II puts at {target} for grape or fruit must.","srcSugar":"NBS C440 Brix curve (mass balance), National Honey Board honey composition, OIV 16.83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Table II, OIV 16.83 g/L per % vol","ogShort":"OG","fgShort":"FG","howTemp":"{what} {from} corrected for temperature: {to}.","needVolume":"Add the batch volume to count the sugar or honey you added.","howEffective":"OG {og} plus {added} added ({solids} g dissolved solids) = effective OG {eff}.","abvH":"Alcohol","abvWhat":"{formula}, the default for {must}.","formulas":{"standard":"Standard formula","alternate":"Alternate formula","balling":"Balling formula"},"attenuation":"Apparent attenuation","refractometer":"If this final reading came from a refractometer, it reads high once there is alcohol. Use a hydrometer.","howStandard":"({og} − {fg}) × 131.25 = {abv} % ABV.","howAlternate":"76.08 × ({og} − {fg}) / (1.775 − {og}) × {fg} / 0.794 = {abv} % ABV.","srcStandard":"Standard formula (OG − FG) × 131.25; yield range AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (alternate formula); yield range AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">How it’s worked out</h2>
+<h3>Two formulas, and which one when</h3>
+<p>The <strong>standard formula</strong> is ABV = (OG − FG) × 131.25. The <strong>alternate formula</strong> (Hall, 1995) is ABV = 76.08 × (OG − FG) / (1.775 − OG) × FG / 0.794. They agree at low gravity and drift apart above about 1.070.</p>
+<p>We compared both with the sugar actually in the must. For grape, fruit and cider musts the standard formula is closer (mean error 0.24 % against OIV potential alcohol from 1.080 to 1.110), because juice carries 8 to 12 % solids that are not sugar. For mead and sugar musts the alternate formula is closer: at 1.100 to 0.996 it gives 14.7 % where the standard formula says 13.7 %. That gap is the usual “my mead is stronger than the calculator says”.</p>
+<h3>Sugar or honey added later</h3>
+<p>Every gram added after the OG reading raises the gravity the yeast really started from. Demijohn works out an effective OG by mass balance: the batch as must mass and dissolved solids from the NBS Brix curve, plus each addition’s solids (sugar 100 %, honey 82.8 %). The ABV is then worked out from that effective OG.</p>
+<h3>Temperature</h3>
+<p>A hydrometer is only right at its calibration temperature. Readings are corrected with NBS Table 110 for sugar solutions before the ABV is worked out. The <a href="../hydrometer-temperature/">temperature calculator</a> explains the correction.</p>
+<h3>Refractometer readings</h3>
+<p>Once alcohol is present a refractometer reads high, so a refractometer FG put straight into an ABV formula is wrong. Use a hydrometer for the final reading, or the refractometer correction in the app (Terrill’s formula, with a warning outside the range it was fitted on).</p>
+<h3>How sure is the number?</h3>
+<p>Every ABV is an estimate. Yeasts turn 16.5 to 17.2 g/L of sugar into 1 % alcohol (AWRI), so read the result as ±2 % of itself. Above about 1.130 the three formulas spread by more than 1 % ABV and the calculator says so.</p>
+<nav class="next" aria-label="Next question"><p class="next-h">Next question</p><ul><li><a href="../hydrometer-temperature/">Hydrometer temperature<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../oechsle/">Gravity scales and table<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../sugar/">How much sugar or honey<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In the app</h2>
+<p>In Demijohn the OG, every reading and every sugar or honey addition are already in the batch, so the ABV and attenuation update with each reading, and step feeds are counted without you doing anything.</p>
+<p class="small">Free: unlimited batches and readings, all of these calculators. Pro is one payment, no subscription. No account, works offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Coming soon</b></a><span class="store soon"><small>App Store</small><b>Coming later</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p class="updated">Checked against the sources: October 25, 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>This page in:</span> <a href="../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p>Demijohn is a batch log and fermentation calculator for home wine, mead and cider, made by Mufatech. This site sets no cookies and loads nothing from other servers.</p>
+<nav aria-label="Site"><a href="../">Demijohn</a><a href="../calculators/">Calculators</a><a href="../switching/">Moving to Demijohn</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../assets/calc-ui.js"></script>
+</body>
+</html>

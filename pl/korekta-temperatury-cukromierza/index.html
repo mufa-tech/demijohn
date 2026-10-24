@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Korekta temperatury cukromierza: kalkulator</title>
+<meta name="description" content="Popraw odczyt cukromierza według temperatury próbki, dla cukromierzy na 20 °C lub 60 °F. Tabela NBS dla roztworów cukru, nie wzór dla samej wody.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/pl/korekta-temperatury-cukromierza/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/spindel-temperaturkorrektur/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/korekta-temperatury-cukromierza/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Korekta temperatury cukromierza: kalkulator">
+<meta property="og:description" content="Popraw odczyt cukromierza według temperatury próbki, dla cukromierzy na 20 °C lub 60 °F. Tabela NBS dla roztworów cukru, nie wzór dla samej wody.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/pl/korekta-temperatury-cukromierza/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-pl.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../pl/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Główne"><a href="../../pl/kalkulatory/" aria-current="page">Kalkulatory</a><a href="../../pl/miod-pitny/">Miód pitny</a><a href="../../pl/support/">Pomoc</a></nav>
+<details class="langpick"><summary aria-label="Język: Polski"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>PL</span></summary><nav aria-label="Język"><a href="../../hydrometer-temperature/" hreflang="en" lang="en">English</a><a href="../../de/spindel-temperaturkorrektur/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/" hreflang="fr" lang="fr">Français</a><a href="../../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/" hreflang="it" lang="it">Italiano</a><a href="../../es/" hreflang="es" lang="es">Español</a><a href="../../pl/korekta-temperatury-cukromierza/" hreflang="pl" lang="pl" aria-current="true">Polski</a><a href="../../sv/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../pl/">Demijohn</a> / <a href="../../pl/kalkulatory/">Kalkulatory</a></p>
+<h1>Korekta odczytu cukromierza według temperatury</h1>
+<p class="lead">Cukromierz pokazuje prawdę tylko w temperaturze, na którą jest wyskalowany, zwykle 20 °C. Wpisz odczyt i temperaturę próbki, a dostaniesz poprawioną gęstość.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="hydro" novalidate>
+<div class="field "><label for="reading">Odczyt cukromierza</label>
+<div class="joined"><input id="reading" name="reading" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="19,3" required aria-describedby="reading-hint reading-err"><select id="reading-scale" name="reading-scale" aria-label="Skala gęstości"><option value="balling" selected>Blg (Balling)</option><option value="sg">SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="reading-hint">Odczytany na dole menisku.</span><span class="err" id="reading-err" hidden></span></div>
+<div class="field "><label for="temp">Temperatura próbki</label>
+<div class="joined"><input id="temp" name="temp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="27" required aria-describedby="temp-hint temp-err"><select id="t-unit" name="t-unit" aria-label="Jednostka temperatury"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="hint" id="temp-hint">Zmierzona w próbce, nie w pokoju.</span><span class="err" id="temp-err" hidden></span></div>
+<fieldset class="choice"><legend>Cukromierz wyskalowany na</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Wynik</h2>
+<div id="calc-nojs" class="callout"><p>Ten kalkulator potrzebuje JavaScriptu. Poniżej opisano, jak policzyć to ręcznie.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Działa w przeglądarce. Nic z tego, co wpiszesz, nie jest wysyłane ani zapisywane.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"pl-PL","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"Blg (Balling)","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"balling","musts":{"grape":"Wino z winogron","fruit":"Wino owocowe","cider":"Cydr lub perry","mead":"Miód pitny","sugar":"Wino z cukru"},"sweet":{"sugar":"Cukier","honey":"Miód"},"unitNames":{"L":"litry","usgal":"galony amerykańskie","impgal":"galony brytyjskie"},"disclaimer":"Dawki są szacunkowe. Dodawaj stopniowo, zmierz ponownie, stosuj się do zaleceń producenta. Tylko do użytku własnego.","volPct":"% obj.","litreSym":"l","scaleUnits":{"sg":"","brix":"°Bx","balling":"Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Uwaga","stop":"Stop","info":"Informacja","good":"OK"},"howTitle":"Jak to policzono","sourceLabel":"Źródło","fillIn":"Wypełnij pola, żeby zobaczyć wynik.","fixErrors":"Popraw zaznaczone pola, żeby zobaczyć wynik.","errNumber":"Wpisz liczbę, np. {example}.","errRange":"Podaj wartość od {min} do {max}.","errGravity":"W skali {scale} ten kalkulator działa od {min} do {max}.","issues":{"outOfRange":"Ta wartość jest poza zakresem, w którym wzór obowiązuje.","invalidInput":"Jednej z wartości nie da się tu użyć.","fgAboveOg":"Odczyt końcowy jest wyższy niż początkowy. Sprawdź oba odczyty i skalę.","extrapolated":"Poniżej 1,000 krzywa Brix i Blg jest ekstrapolowana. Bardziej wiarygodna jest wartość SG.","formulasDisagree":"Przy tej gęstości początkowej wzory różnią się o ponad 1 % obj. Traktuj wynik jako przedział.","honeyMoistureUnusual":"Ta wilgotność jest poza zakresem 13,4 do 22,9 % z badań miodu. Sprawdź odczyt.","alreadyAboveTarget":"Nastaw ma już tyle albo więcej. Nie trzeba nic dodawać.","targetBelowCurrent":"Cel jest poniżej obecnej gęstości.","tempOut":"Temperatura przy odczycie {what} jest poza zakresem 0 do 40 °C (32 do 104 °F). Doprowadź próbkę do 15 do 25 °C i zmierz ponownie.","paOut":"Takiego potencjalnego alkoholu nastaw nie pomieści. Wybierz niższy cel."},"lowConfidence":"Temperatura przy odczycie {what} jest poza zakresem 10 do 35 °C, więc użyto prostszej korekty jak dla samej wody. Doprowadź próbkę do 15 do 25 °C, a odczyt będzie dokładniejszy.","potential":"Potencjalny alkohol","highPa":"Powyżej ok. 15 % większość drożdży staje, zanim zje cały cukier, więc wynik zostanie słodki.","stepFeed":"W miodzie pitnym wiele osób daje część miodu na start, a resztę porcjami. Zapisuj każdą porcję: kalkulator mocy ją policzy.","honeyAmount":"Miód","waterAmount":"Woda","howTargetSugar":"{pa} % potencjalnego alkoholu × 16,83 g/l = {sugar} g/l cukru do przefermentowania, co w nastawie z cukrem lub miodem daje {target}.","howTargetOiv":"{pa} % potencjalnego alkoholu × 16,83 g/l = {sugar} g/l cukru, co według tabeli II OIV daje {target} w moszczu z winogron lub owoców.","srcSugar":"Krzywa Brix NBS C440 (bilans masy), skład miodu wg National Honey Board, OIV 16,83 g/l na 1 % obj.","srcOiv":"OIV-MA-AS2-02, tabela II, OIV 16,83 g/l na 1 % obj.","reading":"próbki","correctedH":"Poprawiony odczyt","correctedWhat":"W temperaturze skalowania {cal}.","calNames":{"15":"15 °C","20":"20 °C","15.555555555555555":"60 °F"},"asSg":"Jako SG","change":"Korekta","pointsWord":"pkt","above35":"Powyżej 35 °Brix używana jest ostatnia kolumna tabeli.","howNbs":"Odczyt = {bx} °Bx. Tabela NBS 110: {cs} w temperaturze próbki, {cc} w temperaturze skalowania. {bx} {cs} − ({cc}) = {bc} °Bx = {sg}.","howWater":"{r} × gęstość wody w temperaturze skalowania {a} / gęstość wody w temperaturze próbki {b} = {sg}.","srcNbs":"NBS Circular C440, tabela 110; kontrola krzyżowa OIV-MA-AS2-01B, tabela VI","srcWater":"Gęstość wody, Tanaka i in. 2001"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Jak to jest liczone</h2>
+<h3>Po co w ogóle korekta</h3>
+<p>Ciepły płyn rozszerza się i robi się lżejszy, więc cukromierz zanurza się głębiej i pokazuje za mało. Zimny płyn pokazuje za dużo. Szkło cukromierza też trochę się rozszerza.</p>
+<h3>Dlaczego nie zwykły wzór</h3>
+<p>Większość kalkulatorów używa wzoru dopasowanego do rozszerzalności czystej wody. Roztwory cukru rozszerzają się bardziej niż woda, więc przy gęstości moszczu taki wzór poprawia za mało, o 0,2 do 0,5 punktu, gdy próbka odbiega o 5 do 10 stopni. Demijohn używa tabeli NBS 110, zmierzonej dla roztworów cukru od 0 do 35 % cukru i od 10 do 35 °C, z uwzględnieniem szkła. Między wierszami tabela jest interpolowana.</p>
+<p>Dla cukromierza na 60 °F lub inną temperaturę odejmuje się korektę z tabeli dla jego temperatury skalowania, zgodnie z zasadą podaną pod tabelą NBS.</p>
+<h3>Poza zakresem 10 do 35 °C</h3>
+<p>Od 0 do 10 °C i od 35 do 40 °C tabeli nie ma, więc używa się stosunku gęstości wody, a wynik jest oznaczony jako mniej pewny. Poza 0 do 40 °C kalkulator się zatrzymuje: doprowadź próbkę do 15 do 25 °C i zmierz ponownie.</p>
+<h3>Gotowe wino</h3>
+<p>Alkohol też rozszerza się bardziej niż woda. Przy 5 stopniach różnicy korekta dla wytrawnego, gotowego wina jest za mała o ok. 0,3 punktu. To mniej, niż pokaże większość domowych cukromierzy, ale gotowe wino mierz w miarę możliwości blisko temperatury skalowania.</p>
+<nav class="next" aria-label="Następne pytanie"><p class="next-h">Następne pytanie</p><ul><li><a href="../../pl/blg-na-alkohol/">Blg na alkohol<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../pl/tabela-blg/">Tabela Blg i skale<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">W aplikacji</h2>
+<p>W Demijohn wpisujesz temperaturę razem z odczytem, a korekta liczy się w trakcie pisania. Temperaturę skalowania każdego cukromierza zapisujesz raz i więcej jej nie wybierasz.</p>
+<p class="small">Za darmo: nastawy i pomiary bez limitu i wszystkie te kalkulatory. Pro to jedna płatność, bez abonamentu. Bez konta, działa offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Wkrótce</b></a><span class="store soon"><small>App Store</small><b>Pojawi się później</b></span></div>
+</aside>
+<h2>Źródła</h2>
+<ol class="sources"><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2468/oiv-ma-as2-01b.pdf" rel="noopener">OIV-MA-AS2-01B, Tables V and VI: hydrometer temperature corrections</a></li><li><a href="https://doi.org/10.1088/0026-1394/38/4/3" rel="noopener">Tanaka et al., Metrologia 38 (2001) 301: density of water</a></li></ol>
+<p class="callout">Dawki są szacunkowe. Dodawaj stopniowo, zmierz ponownie, stosuj się do zaleceń producenta. Tylko do użytku własnego.</p>
+<p class="updated">Sprawdzone ze źródłami: 25 października 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Ta strona w innych językach:</span> <a href="../../hydrometer-temperature/" hreflang="en" lang="en">English</a><a href="../../de/spindel-temperaturkorrektur/" hreflang="de" lang="de">Deutsch</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Dawki są szacunkowe. Dodawaj stopniowo, zmierz ponownie, stosuj się do zaleceń producenta. Tylko do użytku własnego.</p>
+<p>Demijohn to dziennik nastawów i kalkulator fermentacji do domowego wina, miodu pitnego i cydru od Mufatech. Ta strona nie ustawia ciasteczek i niczego nie pobiera z innych serwerów.</p>
+<nav aria-label="Strona"><a href="../../pl/">Demijohn</a><a href="../../pl/kalkulatory/">Kalkulatory</a><a href="../../pl/support/">Pomoc</a><a href="../../pl/privacy/">Prywatność</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

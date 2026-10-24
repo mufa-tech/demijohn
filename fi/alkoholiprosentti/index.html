@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Kotiviinin alkoholiprosentti: laskuri</title>
+<meta name="description" content="Laske kotiviinin, mesiviinin tai siiderin alkoholiprosentti alku- ja loppulukemasta. Oikea kaava, lämpötilakorjaus ja kesken käymisen lisätty sokeri.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Kotiviinin alkoholiprosentti: laskuri">
+<meta property="og:description" content="Laske kotiviinin, mesiviinin tai siiderin alkoholiprosentti alku- ja loppulukemasta. Oikea kaava, lämpötilakorjaus ja kesken käymisen lisätty sokeri.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-fi.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Siirry sisältöön</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../fi/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Päävalikko"><a href="../../fi/alkoholiprosentti/" aria-current="page">Laskuri</a><a href="../../fi/sima-ohje/">Sima-ohje</a><a href="../../fi/support/">Tuki</a></nav>
+<details class="langpick"><summary aria-label="Kieli: Suomi"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>FI</span></summary><nav aria-label="Kieli"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi" aria-current="true">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../fi/">Demijohn</a></p>
+<h1>Laske kotiviinin alkoholiprosentti</h1>
+<p class="lead">Montako prosenttia kotiviinissä on? Kirjoita alkuominaispaino ja viimeisin sokerimittarin lukema. Demijohn käyttää vakiokaavaa rypäle-, hedelmä- ja marjaviinille sekä siiderille ja vaihtoehtoista kaavaa mesiviinille ja sokeriviinille, ja näyttää muut vieressä.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Mitä teet?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Rypäleviini</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Hedelmä- tai marjaviini</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Siideri tai päärynäsiideri</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mesiviini</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Sokeriviini</span></label></div></fieldset>
+<div class="field "><label for="og">Alkuominaispaino (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Tiheysasteikko"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="og-hint">Mitattu ennen hiivan lisäämistä.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Loppu- tai nykyinen ominaispaino</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0,996" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Viimeisin lukemasi.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Mittasitko näytteen lämpimämpänä tai kylmempänä kuin sokerimittarin kalibrointilämpötila?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Lämpötila OG-mittauksessa</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Lämpötilan yksikkö"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Lämpötila tässä mittauksessa</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Sokerimittarin kalibrointilämpötila</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Jätä tyhjäksi, jos näyte oli kalibrointilämpötilassa.</p></details>
+<details class="more"><summary>Lisäsitkö sokeria tai hunajaa OG-mittauksen jälkeen?</summary>
+<div class="field-row two"><div class="field "><label for="add">Lisätty määrä yhteensä</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Massan yksikkö"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Erän tilavuus OG-mittauksessa</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Tilavuuden yksikkö"><option value="L" selected>litrat</option><option value="usgal">Yhdysvaltain gallonat</option><option value="impgal">brittiläiset gallonat</option></select></div>
+<span class="hint" id="vol-hint">Ennen lisäystä.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Mitä lisäsit</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Sokeri</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Hunaja</span></label></div></fieldset>
+<p class="small">Myöhemmin lisätty sokeri tai hunaja ei näy OG:ssä, joten pelkästä OG:stä ja FG:stä laskettu alkoholiprosentti jää liian pieneksi.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Tulos</h2>
+<div id="calc-nojs" class="callout"><p>Laskuri tarvitsee JavaScriptin. Alla oleva menetelmä näyttää, miten sen laskee käsin.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Toimii selaimessasi. Mitään kirjoittamaasi ei lähetetä eikä tallenneta.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"fi-FI","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Rypäleviini","fruit":"Hedelmä- tai marjaviini","cider":"Siideri tai päärynäsiideri","mead":"Mesiviini","sugar":"Sokeriviini"},"sweet":{"sugar":"Sokeri","honey":"Hunaja"},"unitNames":{"L":"litrat","usgal":"Yhdysvaltain gallonat","impgal":"brittiläiset gallonat"},"disclaimer":"Annokset ovat arvioita. Lisää vähitellen, mittaa uudelleen ja noudata valmistajan ohjetta. Vain omaan käyttöön.","volPct":"til-%","litreSym":"l","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Varoitus","stop":"Seis","info":"Huom.","good":"OK"},"howTitle":"Näin se laskettiin","sourceLabel":"Lähde","fillIn":"Täytä kentät, niin näet tuloksen.","fixErrors":"Korjaa yllä merkityt kentät, niin näet tuloksen.","errNumber":"Kirjoita luku, esimerkiksi {example}.","errRange":"Käytä arvoa väliltä {min}–{max}.","errGravity":"Asteikolla {scale} tämä laskuri toimii välillä {min}–{max}.","issues":{"outOfRange":"Arvo on sen alueen ulkopuolella, jolla kaava pätee.","invalidInput":"Jotakin arvoista ei voi käyttää tässä.","fgAboveOg":"Loppulukema on korkeampi kuin alkuominaispaino. Tarkista molemmat lukemat ja asteikko.","extrapolated":"Alle 1,000:n Brix-käyrää on jatkettu laskennallisesti. Luota SG-lukuun.","formulasDisagree":"Tällä alkuominaispainolla kaavat eroavat yli 1 prosenttiyksikön. Lue tulos vaihteluvälinä.","honeyMoistureUnusual":"Kosteus on hunajatutkimuksissa löydetyn 13,4–22,9 %:n ulkopuolella. Tarkista lukema.","alreadyAboveTarget":"Seos on jo tavoitteessa tai sen yli. Lisättävää ei ole.","targetBelowCurrent":"Tavoite on nykyistä ominaispainoa alempana.","tempOut":"{what}: lämpötila on 0–40 °C:n (32–104 °F) ulkopuolella. Tuo näyte 15–25 °C:seen ja mittaa uudelleen.","paOut":"Näin paljon alkoholia ei synny mistään seoksesta. Valitse matalampi tavoite."},"lowConfidence":"{what}: näytteen lämpötila on 10–35 °C:n ulkopuolella, joten käytössä on yksinkertaisempi, pelkän veden korjaus. Tuo näyte 15–25 °C:seen, niin lukema on tarkempi.","potential":"Mahdollinen alkoholi","highPa":"Noin 15 %:n yläpuolella useimmat hiivat pysähtyvät ennen kuin sokeri loppuu, joten tulos jää makeaksi.","stepFeed":"Mesiviinissä moni lisää osan hunajasta alussa ja loput vaiheittain. Kirjaa jokainen lisäys: alkoholiprosenttilaskuri ottaa sen huomioon.","honeyAmount":"Hunaja","waterAmount":"Vesi","howTargetSugar":"{pa} % mahdollista alkoholia × 16,83 g/l = {sugar} g/l käyvää sokeria, mikä on sokeri- tai hunajaseoksessa lukema {target}.","howTargetOiv":"{pa} % mahdollista alkoholia × 16,83 g/l = {sugar} g/l sokeria, mikä on OIV:n taulukon II mukaan rypäle- tai hedelmämehussa lukema {target}.","srcSugar":"NBS C440 -Brix-käyrä (massatase), National Honey Boardin tiedot hunajan koostumuksesta, OIV 16,83 g/l per til-%","srcOiv":"OIV-MA-AS2-02 taulukko II, OIV 16,83 g/l per til-%","ogShort":"OG","fgShort":"FG","howTemp":"{what} {from} lämpötilakorjattuna: {to}.","needVolume":"Anna erän tilavuus, niin lisätty sokeri tai hunaja lasketaan mukaan.","howEffective":"OG {og} ja lisätty {added} ({solids} g liuennutta kuiva-ainetta) = efektiivinen OG {eff}.","abvH":"Alkoholi","abvWhat":"{formula} (oletus: {must}).","formulas":{"standard":"Vakiokaava","alternate":"Vaihtoehtoinen kaava","balling":"Ballingin kaava"},"attenuation":"Näennäinen käymisaste","refractometer":"Jos tämä loppulukema on refraktometristä, se näyttää liian suurta, kun seoksessa on alkoholia. Käytä sokerimittaria.","howStandard":"({og} − {fg}) × 131,25 = {abv} til-%.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} til-%.","srcStandard":"Vakiokaava (OG − FG) × 131,25; saantoalue AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (vaihtoehtoinen kaava); saantoalue AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Näin se lasketaan</h2>
+<h3>Kaksi kaavaa, ja kumpi milloinkin</h3>
+<p><strong>Vakiokaava</strong> on til-% = (OG − FG) × 131,25. <strong>Vaihtoehtoinen kaava</strong> (Hall, 1995) on til-% = 76,08 × (OG − FG) / (1,775 − OG) × FG / 0,794. Matalalla ominaispainolla ne antavat saman tuloksen, ja noin 1,070:n yläpuolella ne erkanevat.</p>
+<p>Vertasin molempia seoksen todelliseen sokeriin. Rypäle-, hedelmä- ja siiderimehuilla vakiokaava on lähempänä (keskivirhe 0,24 % OIV:n mahdolliseen alkoholiin verrattuna välillä 1,080–1,110), koska mehussa on 8–12 % muuta liuennutta ainetta kuin sokeria. Mesiviinillä ja sokeriseoksilla vaihtoehtoinen kaava on lähempänä: lukemista 1,100 ja 0,996 se antaa 14,7 %, kun vakiokaava antaa 13,7 %. Siitä tulee tuttu ”mesiviinini on vahvempaa kuin laskuri väittää”.</p>
+<h3>Myöhemmin lisätty sokeri tai hunaja</h3>
+<p>Jokainen OG-mittauksen jälkeen lisätty gramma nostaa sitä ominaispainoa, josta hiiva oikeasti aloitti. Demijohn laskee efektiivisen OG:n massataseella: erä seoksen massana ja liuenneena aineena NBS:n Brix-käyrän mukaan, plus jokaisen lisäyksen kuiva-aine (sokeri 100 %, hunaja 82,8 %). Alkoholiprosentti lasketaan tästä efektiivisestä OG:stä.</p>
+<h3>Lämpötila</h3>
+<p>Sokerimittari näyttää oikein vain kalibrointilämpötilassaan. Lukemat korjataan sokeriliuoksille mitatulla NBS:n taulukolla 110 ennen kuin alkoholiprosentti lasketaan. Kun annat yllä mittauslämpötilat, korjaus tehdään samalla.</p>
+<h3>Refraktometrin lukemat</h3>
+<p>Kun seoksessa on alkoholia, refraktometri näyttää liian suurta lukemaa, joten suoraan alkoholikaavaan pantu refraktometrin FG on väärin. Mittaa loppulukema sokerimittarilla tai käytä sovelluksen refraktometrikorjausta (Terrillin kaava, varoitus sen sovitusalueen ulkopuolella).</p>
+<h3>Kuinka varma luku on?</h3>
+<p>Jokainen alkoholiprosentti on arvio. Hiiva tarvitsee 16,5–17,2 g/l sokeria yhtä alkoholiprosenttia kohti (AWRI), joten lue tulos ±2 %:n tarkkuudella sen omasta arvosta. Noin 1,130:n yläpuolella kolme kaavaa eroavat yli 1 prosenttiyksikön, ja laskuri kertoo sen.</p>
+
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">Sovelluksessa</h2>
+<p>Demijohnissa OG, jokainen lukema ja jokainen sokeri- tai hunajalisäys ovat jo erässä, joten alkoholiprosentti ja käymisaste päivittyvät joka lukemalla, ja vaiheittaiset lisäykset lasketaan mukaan ilman, että sinun tarvitsee tehdä mitään.</p>
+<p class="small">Ilmaiseksi: rajattomasti eriä ja mittauksia sekä kaikki nämä laskurit. Pro on yksi maksu, ei tilausta. Ei tiliä, toimii ilman verkkoa.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn&amp;listing=kit-wine"><small>Google Play</small><b>Tulossa pian</b></a><span class="store soon"><small>App Store</small><b>Tulossa myöhemmin</b></span></div>
+</aside>
+<h2>Lähteet</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Annokset ovat arvioita. Lisää vähitellen, mittaa uudelleen ja noudata valmistajan ohjetta. Vain omaan käyttöön.</p>
+<p class="updated">Tarkistettu lähteistä: 25. lokakuuta 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Tämä sivu myös:</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Annokset ovat arvioita. Lisää vähitellen, mittaa uudelleen ja noudata valmistajan ohjetta. Vain omaan käyttöön.</p>
+<p>Demijohn on eräpäiväkirja ja laskuri kotiviinille, mesiviinille ja siiderille. Tekijä on Mufatech. Sivusto ei aseta evästeitä eikä lataa mitään muilta palvelimilta.</p>
+<nav aria-label="Sivusto"><a href="../../fi/">Demijohn</a><a href="../../fi/alkoholiprosentti/">Laskuri</a><a href="../../fi/support/">Tuki</a><a href="../../fi/privacy/">Tietosuoja</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

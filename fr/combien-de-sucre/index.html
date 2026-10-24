@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Combien de sucre ajouter ? Calcul pour vin et hydromel</title>
+<meta name="description" content="Calcul de chaptalisation : combien de sucre ou de miel ajouter au moût pour une densité ou un degré visé, par bilan de masse exact, avec le nouveau volume.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/fr/combien-de-sucre/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/wieviel-zucker/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/combien-de-sucre/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/quanto-zucchero/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/cuanto-azucar/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/ile-cukru/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/hur-mycket-socker/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Combien de sucre ajouter ? Calcul pour vin et hydromel">
+<meta property="og:description" content="Calcul de chaptalisation : combien de sucre ou de miel ajouter au moût pour une densité ou un degré visé, par bilan de masse exact, avec le nouveau volume.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/fr/combien-de-sucre/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-fr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../fr/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Principal"><a href="../../fr/calculateurs/" aria-current="page">Calculs</a><a href="../../fr/hydromel-maison/">Guide de l’hydromel</a><a href="../../fr/support/">Assistance</a></nav>
+<details class="langpick"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>FR</span></summary><nav aria-label="Langue"><a href="../../sugar/" hreflang="en" lang="en">English</a><a href="../../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/combien-de-sucre/" hreflang="fr" lang="fr" aria-current="true">Français</a><a href="../../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/hur-mycket-socker/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../fr/">Demijohn</a> / <a href="../../fr/calculateurs/">Calculs</a></p>
+<h1>Combien de sucre ajouter à votre moût</h1>
+<p class="lead">Indiquez le volume et la densité actuelle, puis le degré ou la densité que vous visez. Vous obtenez combien de sucre ou de miel ajouter, et le volume final. Un calcul de chaptalisation sans règle approximative.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="sugar" novalidate>
+<fieldset class="choice"><legend>Que faites-vous ?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Vin de raisin</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Vin de fruits</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cidre ou poiré</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Hydromel</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Vin de sucre</span></label></div></fieldset>
+<div class="field "><label for="vol">Volume de la cuvée</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Unité de volume"><option value="L" selected>litres</option><option value="usgal">gallons US</option><option value="impgal">gallons impériaux</option></select></div>
+<span class="hint" id="vol-hint">Ce qui est dans la bonbonne maintenant.</span><span class="err" id="vol-err" hidden></span></div>
+<div class="field "><label for="now">Densité actuelle</label>
+<div class="joined"><input id="now" name="now" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,050" required aria-describedby="now-hint now-err"><select id="now-scale" name="now-scale" aria-label="Échelle de densité"><option value="sg" selected>Densité (SG)</option><option value="baume">°Baumé</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="now-hint">Jus, moût ou eau. L’eau est à 1,000.</span><span class="err" id="now-err" hidden></span></div>
+<fieldset class="choice"><legend>Votre cible</legend><div class="pills"><label class="pill"><input type="radio" name="target-kind" value="pa" checked><span>Alcool potentiel</span></label><label class="pill"><input type="radio" name="target-kind" value="sg"><span>Densité</span></label></div></fieldset>
+<div data-show="pa"><div class="field "><label for="target-pa">Alcool potentiel visé (% vol.)</label>
+<input id="target-pa" name="target-pa" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="12" required aria-describedby="target-pa-hint target-pa-err">
+<span class="hint" id="target-pa-hint">Si tout le sucre fermente.</span><span class="err" id="target-pa-err" hidden></span></div></div>
+<div data-show="sg" hidden><div class="field "><label for="target-sg">Densité visée</label>
+<input id="target-sg" name="target-sg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" aria-describedby="target-sg-hint target-sg-err">
+<span class="hint" id="target-sg-hint">Même échelle que la mesure ci-dessus.</span><span class="err" id="target-sg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Ajouter</legend><div class="pills"><label class="pill"><input type="radio" name="sweet" value="sugar" checked><span>Sucre</span></label><label class="pill"><input type="radio" name="sweet" value="honey"><span>Miel</span></label></div></fieldset>
+<details class="more"><summary>Vous connaissez l’humidité de votre miel ?</summary><div class="field "><label for="moist">Humidité du miel (%)</label>
+<input id="moist" name="moist" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="17,2" aria-describedby="moist-hint moist-err">
+<span class="hint" id="moist-hint">Un miel moyen contient 17,2 % d’eau. Un réfractomètre à miel la mesure directement.</span><span class="err" id="moist-err" hidden></span></div></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Résultat</h2>
+<div id="calc-nojs" class="callout"><p>Ce calcul demande JavaScript. La méthode ci-dessous montre comment le faire à la main.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Tourne dans votre navigateur. Rien de ce que vous tapez n’est envoyé ni enregistré.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"fr-FR","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"Densité (SG)","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Vin de raisin","fruit":"Vin de fruits","cider":"Cidre ou poiré","mead":"Hydromel","sugar":"Vin de sucre"},"sweet":{"sugar":"Sucre","honey":"Miel"},"unitNames":{"L":"litres","usgal":"gallons US","impgal":"gallons impériaux"},"disclaimer":"Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.","volPct":"% vol.","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Attention","stop":"Arrêt","info":"Remarque","good":"OK"},"howTitle":"Comment c’est calculé","sourceLabel":"Source","fillIn":"Remplissez les champs pour voir le résultat.","fixErrors":"Corrigez les champs signalés ci-dessus pour voir le résultat.","errNumber":"Tapez un nombre, par exemple {example}.","errRange":"Entrez une valeur de {min} à {max}.","errGravity":"Sur l’échelle {scale}, ce calcul va de {min} à {max}.","issues":{"outOfRange":"Cette valeur sort de la plage où la formule est valable.","invalidInput":"Une des valeurs ne peut pas être utilisée ici.","fgAboveOg":"La mesure finale est plus haute que la densité initiale. Vérifiez les deux mesures et l’échelle.","extrapolated":"Sous 1,000, la courbe Brix est extrapolée. Fiez-vous au chiffre en densité.","formulasDisagree":"À cette densité initiale, les formules diffèrent de plus de 1 % vol. Lisez le résultat comme une fourchette.","honeyMoistureUnusual":"Cette humidité sort des 13,4 à 22,9 % relevés dans les études sur le miel. Vérifiez la mesure.","alreadyAboveTarget":"Le moût est déjà à cette cible ou au-dessus. Rien à ajouter.","targetBelowCurrent":"La cible est sous la densité actuelle.","tempOut":"Température ({what}) hors de 0 à 40 °C (32 à 104 °F). Amenez l’échantillon entre 15 et 25 °C et mesurez à nouveau.","paOut":"Ce degré potentiel dépasse ce qu’un moût peut contenir. Visez plus bas."},"lowConfidence":"Échantillon ({what}) hors de 10 à 35 °C : une correction plus simple, basée sur l’eau seule, est utilisée. Amenez-le entre 15 et 25 °C pour une mesure plus fiable.","potential":"Alcool potentiel","highPa":"Au-delà de 15 % environ, la plupart des levures s’arrêtent avant la fin du sucre, et le résultat reste doux.","stepFeed":"Pour l’hydromel, beaucoup mettent une partie du miel au départ et le reste en plusieurs fois. Notez chaque ajout : le calcul du degré d’alcool le compte.","honeyAmount":"Miel","waterAmount":"Eau","howTargetSugar":"{pa} % d’alcool potentiel × 16,83 g/L = {sugar} g/L de sucre fermentescible, atteint à {target} dans un moût de sucre ou de miel.","howTargetOiv":"{pa} % d’alcool potentiel × 16,83 g/L = {sugar} g/L de sucre, que la table II de l’OIV place à {target} pour un moût de raisin ou de fruits.","srcSugar":"Courbe Brix NBS C440 (bilan de masse), composition du miel du National Honey Board, OIV 16,83 g/L par % vol.","srcOiv":"OIV-MA-AS2-02 table II, OIV 16,83 g/L par % vol.","howChaptalize":"Moût à {now} = {brix} °Bx selon la table II de l’OIV, soit {sugar} g/L de sucre. Cible {pa} % × 16,83 = {target} g/L. Formule de chaptalisation de l’OIV, avec 1,0526 g de sucre inverti par g de sucre et 0,617 mL par g dissous.","howRaise":"{from} = {b0} °Bx, {to} = {b1} °Bx. Masse du moût {must} g. Grammes = {must} × ({b1} − {b0}) / (100 × {f} − {b1}).","addH":"Ajouter","addSugar":"de sucre (saccharose), dissous dans un peu de moût.","addHoney":"de miel, délayé dans un peu d’eau tiède ou de moût.","newGravity":"Densité après l’ajout","newVolume":"Volume après l’ajout","dilute":"Pour redescendre à {to}, ajoutez plutôt environ {water} d’eau."}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Comment c’est calculé</h2>
+<h3>Un bilan de masse exact</h3>
+<p>Le Brix est le pourcentage massique de sucre dissous : la quantité découle donc d’un bilan, pas d’une règle approximative. Le moût pèse V × SG × 998,203 g. Pour passer de B0 à B1 °Brix avec un produit sucrant qui contient une fraction f de sucre : grammes = masse du moût × (B1 − B0) / (100 × f − B1). Pour le sucre, f = 1 ; pour le miel, f = 0,828, car un miel moyen contient 17,2 % d’eau.</p>
+<p>Les règles du type « tant de grammes par litre pour passer de 1,000 à 1,090 » oublient que le sucre ajoute aussi du volume. Pour 1 L d’eau amené à 1,090, le bilan donne 275 g de sucre et 1,17 L de moût.</p>
+<h3>Du degré potentiel à la densité</h3>
+<p>L’alcool potentiel, c’est le sucre fermentescible ÷ 16,83 g/L, la convention de l’OIV et de l’UE. Pour les moûts de raisin et de fruits, la densité qui contient ce sucre vient de la table II de l’OIV, car le jus contient aussi d’autres matières sèches. Pour l’hydromel et le vin de sucre, elle vient du sucre lui-même : la matière sèche du miel est à environ 94 % du sucre fermentescible.</p>
+<p>Pour les moûts de raisin déjà dans la table de l’OIV (à partir de 1,041), le sucre se calcule avec la formule de chaptalisation de l’OIV, qui tient compte du volume que le sucre ajoute.</p>
+<h3>Déjà au-dessus de la cible</h3>
+<p>Si le moût dépasse déjà la cible, le calcul indique combien d’eau ajouter pour redescendre. L’eau dilue aussi tout le reste : acidité, couleur et arômes.</p>
+<h3>Le miel en plusieurs fois</h3>
+<p>Un hydromel fort démarre plus facilement sous 1,110 environ. Beaucoup ajoutent une partie du miel plus tard, en deux ou trois fois. Le <a href="../../fr/calcul-degre-alcool/">calcul du degré d’alcool</a> compte ces ajouts, et le <a href="../../fr/hydromel-maison/">guide de l’hydromel</a> explique la méthode.</p>
+<nav class="next" aria-label="Question suivante"><p class="next-h">Question suivante</p><ul><li><a href="../../fr/calcul-degre-alcool/">Degré d’alcool (DI et DF)<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../fr/hydromel-maison/">Hydromel pour débutants<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">Dans l’appli</h2>
+<p>Dans Demijohn, ce calcul s’ouvre depuis la cuvée avec son volume et sa dernière densité déjà remplis, et « Ajouter au journal » inscrit la quantité comme un ajout. Le degré d’alcool la compte ensuite dans la DI effective.</p>
+<p class="small">Gratuit : cuvées et mesures illimitées, tous ces calculs. Pro se paie une fois, sans abonnement. Pas de compte, fonctionne hors ligne.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Bientôt</b></a><span class="store soon"><small>App Store</small><b>Plus tard</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2469/oiv-ma-as2-02.pdf" rel="noopener">OIV-MA-AS2-02, Table II: Brix, must density, sugar and potential alcohol</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://www.bjcp.org/mead/honeydefs.pdf" rel="noopener">National Honey Board, honey composition (White et al., USDA, 1962)</a></li><li><a href="https://homebrewersassociation.org/zymurgy/sweet-life-making-mead-easy-way/" rel="noopener">Piatz, S., “The Sweet Life”, Zymurgy, July/August 2011 (honey points per pound)</a></li></ol>
+<p class="callout">Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.</p>
+<p class="updated">Vérifié d’après les sources : 25 octobre 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Cette page en :</span> <a href="../../sugar/" hreflang="en" lang="en">English</a><a href="../../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/hur-mycket-socker/" hreflang="sv" lang="sv">Svenska</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.</p>
+<p>Demijohn est un journal de cuvée et un calculateur de fermentation pour le vin, l’hydromel et le cidre maison, fait par Mufatech. Ce site ne pose aucun cookie et ne charge rien depuis d’autres serveurs.</p>
+<nav aria-label="Site"><a href="../../fr/">Demijohn</a><a href="../../fr/calculateurs/">Calculs</a><a href="../../fr/support/">Assistance</a><a href="../../fr/privacy/">Confidentialité</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

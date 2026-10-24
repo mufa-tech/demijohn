@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Rechner zum Wein selber machen: Alkohol, Zucker, Öchsle</title>
+<meta name="description" content="Alkoholgehalt aus Start- und Enddichte, wieviel Zucker oder Honig, Temperaturkorrektur für die Spindel und eine Öchsle-Tabelle. Rechnet wie die App.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/de/rechner/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/calculators/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/rechner/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calculateurs/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/rekenhulpen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolatori/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calculadoras/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/kalkulatory/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/kalkylatorer/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/calculators/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Rechner zum Wein selber machen: Alkohol, Zucker, Öchsle">
+<meta property="og:description" content="Alkoholgehalt aus Start- und Enddichte, wieviel Zucker oder Honig, Temperaturkorrektur für die Spindel und eine Öchsle-Tabelle. Rechnet wie die App.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/de/rechner/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-de.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../de/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Hauptmenü"><a href="../../de/rechner/" aria-current="page">Rechner</a><a href="../../de/met-selber-machen/">Met-Anleitung</a><a href="../../de/support/">Hilfe</a></nav>
+<details class="langpick"><summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>DE</span></summary><nav aria-label="Sprache"><a href="../../calculators/" hreflang="en" lang="en">English</a><a href="../../de/rechner/" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="../../fr/calculateurs/" hreflang="fr" lang="fr">Français</a><a href="../../nl/rekenhulpen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolatori/" hreflang="it" lang="it">Italiano</a><a href="../../es/calculadoras/" hreflang="es" lang="es">Español</a><a href="../../pl/kalkulatory/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/kalkylatorer/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../de/">Demijohn</a></p>
+<h1>Rechner für Wein, Met und Apfelwein</h1>
+<p class="lead">Dieselben Formeln wie in der App Demijohn, unter jedem Ergebnis steht die Quelle. Sie laufen in deinem Browser: Was du eingibst, wird weder gesendet noch gespeichert.</p>
+<ul class="calc-cards"><li><a class="card calc-card" href="../../de/alkoholgehalt-berechnen/"><span class="cc-h">Alkohol aus Start- und Enddichte<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Standardformel und alternative Formel, Temperaturkorrektur, Honig in Etappen.</span></a></li><li><a class="card calc-card" href="../../de/wieviel-zucker/"><span class="cc-h">Wieviel Zucker oder Honig<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Für eine Zieldichte oder einen potenziellen Alkohol, mit dem neuen Volumen.</span></a></li><li><a class="card calc-card" href="../../de/spindel-temperaturkorrektur/"><span class="cc-h">Temperatur der Spindel<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Warm oder kalt gemessen korrigieren, für Spindeln mit 20 °C oder 60 °F.</span></a></li><li><a class="card calc-card" href="../../de/oechsle-tabelle/"><span class="cc-h">Öchsle-Tabelle und Skalen<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Öchsle, SG, KMW (Babo), Brix, Plato, Baumé, mit potenziellem Alkohol.</span></a></li><li><a class="card calc-card" href="../../de/met-selber-machen/"><span class="cc-h">Met selber machen<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Honig für deinen Ansatz, Nährstoff in Etappen, fertig vergären und abfüllen.</span></a></li></ul>
+<div class="prose gap-top">
+<h2>Womit anfangen</h2>
+<ol>
+<li><strong>Spindel bei der richtigen Temperatur ablesen.</strong> Ist die Probe wärmer oder kälter als die Bezugstemperatur deiner Spindel, korrigierst du den Wert mit dem <a href="../../de/spindel-temperaturkorrektur/">Temperaturrechner</a>.</li>
+<li><strong>Den Start festlegen.</strong> Der <a href="../../de/wieviel-zucker/">Zucker- und Honigrechner</a> sagt dir die Menge für eine Zieldichte oder einen potenziellen Alkohol.</li>
+<li><strong>Das Ende messen.</strong> Der <a href="../../de/alkoholgehalt-berechnen/">Alkoholrechner</a> rechnet mit deiner Startdichte und der letzten Messung, auch mit Zucker oder Honig, den du unterwegs zugegeben hast.</li>
+<li><strong>Andere Skala auf dem Etikett oder im Buch?</strong> <a href="../../de/oechsle-tabelle/">Umrechner und Tabelle</a> kennen SG, Brix, Plato, Öchsle, KMW (Babo) und Baumé.</li>
+</ol>
+<p class="callout">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Diese Seite auf:</span> <a href="../../calculators/" hreflang="en" lang="en">English</a><a href="../../fr/calculateurs/" hreflang="fr" lang="fr">Français</a><a href="../../nl/rekenhulpen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolatori/" hreflang="it" lang="it">Italiano</a><a href="../../es/calculadoras/" hreflang="es" lang="es">Español</a><a href="../../pl/kalkulatory/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/kalkylatorer/" hreflang="sv" lang="sv">Svenska</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+<p>Demijohn ist Gärprotokoll und Rechner für Wein, Met und Apfelwein zu Hause, von Mufatech. Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.</p>
+<nav aria-label="Seite"><a href="../../de/">Demijohn</a><a href="../../de/rechner/">Rechner</a><a href="../../de/support/">Hilfe</a><a href="../../de/privacy/">Datenschutz</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+
+</body>
+</html>

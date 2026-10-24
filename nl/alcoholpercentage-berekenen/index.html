@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Alcoholpercentage berekenen: wijn, mede, cider</title>
+<meta name="description" content="Alcoholpercentage uit begin- en eind-SG, met de juiste formule voor wijn, honingwijn of cider, temperatuurcorrectie en suiker die je later toevoegt.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Alcoholpercentage berekenen: wijn, mede, cider">
+<meta property="og:description" content="Alcoholpercentage uit begin- en eind-SG, met de juiste formule voor wijn, honingwijn of cider, temperatuurcorrectie en suiker die je later toevoegt.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-nl.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Naar de inhoud</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../nl/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Hoofdmenu"><a href="../../nl/rekenhulpen/" aria-current="page">Rekenhulpen</a><a href="../../nl/mede-maken/">Mede maken</a><a href="../../nl/support/">Hulp</a></nav>
+<details class="langpick"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>NL</span></summary><nav aria-label="Taal"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl" aria-current="true">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../nl/">Demijohn</a> / <a href="../../nl/rekenhulpen/">Rekenhulpen</a></p>
+<h1>Alcoholpercentage van je wijn berekenen</h1>
+<p class="lead">Vul je begin-SG en je laatste meting in. Demijohn gebruikt de standaardformule voor druivenwijn, fruitwijn en cider en de alternatieve formule voor honingwijn en suikerwijn, en zet de andere ernaast.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Wat maak je?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Druivenwijn</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Fruitwijn</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cider of perry</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mede (honingwijn)</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Suikerwijn</span></label></div></fieldset>
+<div class="field "><label for="og">Begin-SG (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Dichtheidsschaal"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="og-hint">Gemeten voordat de gist erin ging.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Eind-SG of huidige SG</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0,996" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Je laatste meting.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Gemeten bij een andere temperatuur dan waarop je hydrometer geijkt is?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Temperatuur bij begin-SG</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Temperatuureenheid"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Temperatuur bij deze meting</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Hydrometer geijkt op</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Laat leeg als het monster op de ijktemperatuur was.</p></details>
+<details class="more"><summary>Suiker of honing toegevoegd na de begin-SG?</summary>
+<div class="field-row two"><div class="field "><label for="add">Totaal toegevoegd</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Gewichtseenheid"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Volume van de batch bij de begin-SG</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volume-eenheid"><option value="L" selected>liter</option><option value="usgal">Amerikaanse gallon</option><option value="impgal">Britse gallon</option></select></div>
+<span class="hint" id="vol-hint">Voor de toevoeging.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Wat je hebt toegevoegd</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Suiker</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Honing</span></label></div></fieldset>
+<p class="small">Suiker of honing die je later toevoegt, zie je nooit terug in de begin-SG. Reken je alleen met begin- en eind-SG, dan komt het alcoholpercentage te laag uit.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Resultaat</h2>
+<div id="calc-nojs" class="callout"><p>Deze calculator heeft JavaScript nodig. Hieronder staat hoe je het met de hand uitrekent.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Draait in je browser. Niets wat je typt wordt verstuurd of bewaard.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"nl-NL","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Druivenwijn","fruit":"Fruitwijn","cider":"Cider of perry","mead":"Mede (honingwijn)","sugar":"Suikerwijn"},"sweet":{"sugar":"Suiker","honey":"Honing"},"unitNames":{"L":"liter","usgal":"Amerikaanse gallon","impgal":"Britse gallon"},"disclaimer":"Doseringen zijn schattingen. Voeg in stappen toe, meet opnieuw, volg de gebruiksaanwijzing. Alleen voor eigen gebruik.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Waarschuwing","stop":"Stop","info":"Let op","good":"OK"},"howTitle":"Zo is het berekend","sourceLabel":"Bron","fillIn":"Vul de velden in om het resultaat te zien.","fixErrors":"Verbeter de gemarkeerde velden hierboven om het resultaat te zien.","errNumber":"Typ een getal, bijvoorbeeld {example}.","errRange":"Kies een waarde van {min} tot {max}.","errGravity":"Op de {scale}-schaal werkt deze calculator van {min} tot {max}.","issues":{"outOfRange":"Dit valt buiten het bereik waarin de formule geldt.","invalidInput":"Een van de waarden is hier niet bruikbaar.","fgAboveOg":"De laatste meting is hoger dan de begin-SG. Controleer beide metingen en de schaal.","extrapolated":"Onder 1,000 is de Brix-curve doorgetrokken. Ga uit van de SG.","formulasDisagree":"Bij deze begin-SG verschillen de formules meer dan 1 % vol. Lees het resultaat als een bereik.","honeyMoistureUnusual":"Dat watergehalte valt buiten de 13,4 tot 22,9 % uit onderzoek naar honing. Controleer de meting.","alreadyAboveTarget":"De most zit al op of boven dit doel. Je hoeft niets toe te voegen.","targetBelowCurrent":"Het doel ligt onder de huidige SG.","tempOut":"De temperatuur bij {what} valt buiten 0 tot 40 °C (32 tot 104 °F). Breng het monster op 15 tot 25 °C en meet opnieuw.","paOut":"Zoveel alcohol kan een most niet opleveren. Kies een lager doel."},"lowConfidence":"Het monster bij {what} zit buiten 10 tot 35 °C, dus er wordt een eenvoudigere correctie voor water gebruikt. Breng het monster op 15 tot 25 °C voor een betere meting.","potential":"Mogelijk alcoholpercentage","highPa":"Boven ongeveer 15 % stoppen de meeste gisten voordat alle suiker op is, dus het resultaat blijft zoet.","stepFeed":"Bij mede maken doen veel mensen een deel van de honing er bij de start in en de rest in stappen. Noteer elke toevoeging: de alcoholcalculator telt die mee.","honeyAmount":"Honing","waterAmount":"Water","howTargetSugar":"{pa} % mogelijk alcohol × 16,83 g/L = {sugar} g/L vergistbare suiker, bereikt bij {target} in een most van suiker of honing.","howTargetOiv":"{pa} % mogelijk alcohol × 16,83 g/L = {sugar} g/L suiker, wat volgens OIV-tabel II {target} is voor most van druiven of fruit.","srcSugar":"NBS C440 Brix-curve (massabalans), samenstelling van honing volgens de National Honey Board, OIV 16,83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 tabel II, OIV 16,83 g/L per % vol","ogShort":"de begin-SG","fgShort":"de laatste meting","howTemp":"Gecorrigeerd voor temperatuur: {what} {from} wordt {to}.","needVolume":"Vul het volume van de batch in om de toegevoegde suiker of honing mee te tellen.","howEffective":"Begin-SG {og} plus {added} toegevoegd ({solids} g opgeloste stof) = effectieve begin-SG {eff}.","abvH":"Alcohol","abvWhat":"{formula}, standaard voor {must}.","formulas":{"standard":"Standaardformule","alternate":"Alternatieve formule","balling":"Balling-formule"},"attenuation":"Schijnbare vergistingsgraad","refractometer":"Kwam deze eindmeting van een refractometer? Die meet te hoog zodra er alcohol in zit. Gebruik een hydrometer.","howStandard":"({og} − {fg}) × 131,25 = {abv} % vol.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} % vol.","srcStandard":"Standaardformule (OG − FG) × 131,25; opbrengst AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (alternatieve formule); opbrengst AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Zo wordt het berekend</h2>
+<h3>Twee formules, en wanneer welke</h3>
+<p>De <strong>standaardformule</strong> is alcohol = (OG − FG) × 131,25. De <strong>alternatieve formule</strong> (Hall, 1995) is alcohol = 76,08 × (OG − FG) / (1,775 − OG) × FG / 0,794. Bij een lage SG komen ze overeen, boven ongeveer 1,070 lopen ze uit elkaar.</p>
+<p>Ik heb beide vergeleken met de suiker die echt in de most zat. Voor most van druiven, fruit en appels zit de standaardformule dichterbij (gemiddelde fout 0,24 % ten opzichte van het mogelijk alcoholpercentage volgens de OIV, van 1,080 tot 1,110), omdat sap 8 tot 12 % opgeloste stof bevat die geen suiker is. Voor honingwijn en suikerwijn zit de alternatieve formule dichterbij: van 1,100 naar 0,996 geeft die 14,7 %, waar de standaardformule 13,7 % zegt. Dat verschil is het bekende “mijn honingwijn is sterker dan de calculator zegt”.</p>
+<h3>Suiker of honing die je later toevoegt</h3>
+<p>Elke gram die je na de begin-SG toevoegt, verhoogt de SG waarmee de gist eigenlijk begon. Demijohn rekent met een massabalans een effectieve begin-SG uit: de batch als massa most met opgeloste stof volgens de Brix-curve van het NBS, plus de opgeloste stof van elke toevoeging (suiker 100 %, honing 82,8 %). Het alcoholpercentage komt dan uit die effectieve begin-SG.</p>
+<h3>Temperatuur</h3>
+<p>Een hydrometer klopt alleen op de temperatuur waarop hij geijkt is. Metingen worden gecorrigeerd met NBS-tabel 110 voor suikeroplossingen voordat het alcoholpercentage wordt berekend. Vul daarvoor hierboven de temperatuur van je monster in.</p>
+<h3>Metingen met een refractometer</h3>
+<p>Zodra er alcohol in zit, meet een refractometer te hoog. Een eindmeting van de refractometer die je zo in een alcoholformule zet, klopt dus niet. Gebruik voor de eindmeting een hydrometer, of de refractometercorrectie in de app (de formule van Terrill, met een waarschuwing buiten het bereik waarvoor die is opgesteld).</p>
+<h3>Hoe zeker is het getal?</h3>
+<p>Elk alcoholpercentage is een schatting. Gist maakt van 16,5 tot 17,2 g/L suiker 1 % alcohol (AWRI), dus lees het resultaat als ±2 % van zichzelf. Boven ongeveer 1,130 liggen de drie formules meer dan 1 % vol uit elkaar en dat zegt de calculator er dan bij.</p>
+
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In de app</h2>
+<p>In Demijohn staan de begin-SG, elke meting en elke toevoeging van suiker of honing al in de batch. Alcohol en vergistingsgraad worden bij elke meting bijgewerkt, en honing die je in stappen toevoegt telt vanzelf mee.</p>
+<p class="small">Gratis: onbeperkt batches en metingen, al deze rekenhulpen. Pro betaal je één keer, geen abonnement. Geen account, werkt offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Binnenkort</b></a><span class="store soon"><small>App Store</small><b>Later</b></span></div>
+</aside>
+<h2>Bronnen</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Doseringen zijn schattingen. Voeg in stappen toe, meet opnieuw, volg de gebruiksaanwijzing. Alleen voor eigen gebruik.</p>
+<p class="updated">Gecontroleerd aan de bronnen: 25 oktober 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Deze pagina in:</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doseringen zijn schattingen. Voeg in stappen toe, meet opnieuw, volg de gebruiksaanwijzing. Alleen voor eigen gebruik.</p>
+<p>Demijohn is een logboek en gistingscalculator voor zelfgemaakte wijn, honingwijn en cider, gemaakt door Mufatech. Deze site plaatst geen cookies en laadt niets van andere servers.</p>
+<nav aria-label="Site"><a href="../../nl/">Demijohn</a><a href="../../nl/rekenhulpen/">Rekenhulpen</a><a href="../../nl/support/">Hulp</a><a href="../../nl/privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Calcolo gradazione alcolica: vino fatto in casa, idromele</title>
+<meta name="description" content="Gradazione alcolica da densità iniziale e finale, con la formula giusta per vino, idromele o sidro, correzione della temperatura e zucchero aggiunto dopo.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Calcolo gradazione alcolica: vino fatto in casa, idromele">
+<meta property="og:description" content="Gradazione alcolica da densità iniziale e finale, con la formula giusta per vino, idromele o sidro, correzione della temperatura e zucchero aggiunto dopo.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-it.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../it/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Principale"><a href="../../it/calcolatori/" aria-current="page">Calcolatori</a><a href="../../it/idromele-come-si-fa/">Guida all’idromele</a><a href="../../it/support/">Assistenza</a></nav>
+<details class="langpick"><summary aria-label="Lingua: Italiano"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>IT</span></summary><nav aria-label="Lingua"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it" aria-current="true">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../it/">Demijohn</a> / <a href="../../it/calcolatori/">Calcolatori</a></p>
+<h1>Calcolare la gradazione del vino fatto in casa</h1>
+<p class="lead">Scrivi la densità iniziale e l’ultima lettura del mostimetro. Demijohn usa la formula standard per uva, frutta e sidro e la formula alternativa per idromele e mosti di zucchero, e ti mostra le altre accanto.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Cosa stai facendo?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape" checked><span>Vino d’uva</span></label><label class="pill"><input type="radio" name="must" value="fruit"><span>Vino di frutta</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Sidro o perry</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Idromele</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Zucchero e acqua</span></label></div></fieldset>
+<div class="field "><label for="og">Densità iniziale (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="18,2" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Scala"><option value="kmw" selected>Gradi Babo</option><option value="sg">Densità (SG)</option><option value="brix">°Brix</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="og-hint">Misurata prima di inoculare il lievito.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Densità finale o attuale</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="–" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">La tua ultima lettura.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Letture prese più calde o più fredde della taratura del mostimetro?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Temperatura alla lettura iniziale</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Unità di temperatura"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Temperatura a questa lettura</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Mostimetro tarato a</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Lascia vuoto se il campione era alla temperatura di taratura.</p></details>
+<details class="more"><summary>Hai aggiunto zucchero o miele dopo la lettura iniziale?</summary>
+<div class="field-row two"><div class="field "><label for="add">Quantità aggiunta in tutto</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Unità di massa"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Volume del lotto alla lettura iniziale</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Unità di volume"><option value="L" selected>litri</option><option value="usgal">galloni USA</option><option value="impgal">galloni imperiali</option></select></div>
+<span class="hint" id="vol-hint">Prima dell’aggiunta.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Cosa hai aggiunto</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Zucchero</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Miele</span></label></div></fieldset>
+<p class="small">Lo zucchero o il miele aggiunti dopo non compaiono nella densità iniziale, quindi la gradazione calcolata solo da OG e FG viene troppo bassa.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Risultato</h2>
+<div id="calc-nojs" class="callout"><p>Questo calcolatore ha bisogno di JavaScript. Il metodo qui sotto spiega come fare il conto a mano.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Funziona nel tuo browser. Quello che scrivi non viene inviato né salvato.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"it-IT","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"Densità (SG)","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"Gradi Babo","baume":"°Baumé"},"defaultScale":"kmw","musts":{"grape":"Vino d’uva","fruit":"Vino di frutta","cider":"Sidro o perry","mead":"Idromele","sugar":"Zucchero e acqua"},"sweet":{"sugar":"Zucchero","honey":"Miele"},"unitNames":{"L":"litri","usgal":"galloni USA","impgal":"galloni imperiali"},"disclaimer":"Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°Babo","baume":"°Bé"},"flags":{"warn":"Attenzione","stop":"Stop","info":"Nota","good":"OK"},"howTitle":"Come è stato calcolato","sourceLabel":"Fonte","fillIn":"Compila i campi per vedere il risultato.","fixErrors":"Correggi i campi segnati qui sopra per vedere il risultato.","errNumber":"Scrivi un numero, per esempio {example}.","errRange":"Usa un valore da {min} a {max}.","errGravity":"Sulla scala {scale} questo calcolatore va da {min} a {max}.","issues":{"outOfRange":"Il valore è fuori dall’intervallo in cui la formula vale.","invalidInput":"Uno dei valori qui non si può usare.","fgAboveOg":"La lettura finale è più alta della densità iniziale. Controlla tutte e due le letture e la scala.","extrapolated":"Sotto 1,000 la curva del Brix è estrapolata. Fidati del valore in SG.","formulasDisagree":"A questa densità iniziale le formule si discostano di più dell’1 % vol. Leggi il risultato come un intervallo.","honeyMoistureUnusual":"Questa umidità è fuori dall’intervallo da 13,4 a 22,9 % trovato nelle analisi sul miele. Controlla la lettura.","alreadyAboveTarget":"Il mosto è già all’obiettivo o sopra. Non c’è niente da aggiungere.","targetBelowCurrent":"L’obiettivo è sotto la densità attuale.","tempOut":"La temperatura della lettura {what} è fuori da 0 a 40 °C (da 32 a 104 °F). Porta il campione tra 15 e 25 °C e rileggi.","paOut":"Un mosto non può contenere zucchero per questo alcol potenziale. Scegli un obiettivo più basso."},"lowConfidence":"La lettura {what} è fuori da 10 a 35 °C, quindi si usa una correzione più semplice, basata solo sull’acqua. Porta il campione tra 15 e 25 °C per una lettura migliore.","potential":"Alcol potenziale","highPa":"Sopra il 15 % circa la maggior parte dei lieviti si ferma prima che lo zucchero finisca, e il risultato resta dolce.","stepFeed":"Per l’idromele molti mettono parte del miele all’inizio e il resto a più riprese. Segna ogni aggiunta: il calcolo della gradazione ne tiene conto.","honeyAmount":"Miele","waterAmount":"Acqua","howTargetSugar":"{pa} % di alcol potenziale × 16,83 g/L = {sugar} g/L di zucchero fermentabile, che in un mosto di zucchero o di miele si raggiunge a {target}.","howTargetOiv":"{pa} % di alcol potenziale × 16,83 g/L = {sugar} g/L di zucchero, che la Tabella II OIV mette a {target} per un mosto d’uva o di frutta.","srcSugar":"Curva del Brix NBS C440 (bilancio di massa), composizione del miele del National Honey Board, OIV 16,83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Tabella II, OIV 16,83 g/L per % vol","ogShort":"OG","fgShort":"FG","howTemp":"{what} {from} corretta per la temperatura: {to}.","needVolume":"Aggiungi il volume del lotto per contare lo zucchero o il miele aggiunti.","howEffective":"OG {og} più {added} aggiunti ({solids} g di solidi disciolti) = OG effettiva {eff}.","abvH":"Alcol","abvWhat":"{formula}, quella predefinita per {must}.","formulas":{"standard":"Formula standard","alternate":"Formula alternativa","balling":"Formula di Balling"},"attenuation":"Attenuazione apparente","refractometer":"Se questa lettura finale viene da un rifrattometro, con l’alcol legge alto. Usa un mostimetro.","howStandard":"({og} − {fg}) × 131,25 = {abv} % vol.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} % vol.","srcStandard":"Formula standard (OG − FG) × 131,25; resa AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (formula alternativa); resa AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Come si calcola</h2>
+<h3>Due formule, e quando usarle</h3>
+<p>La <strong>formula standard</strong> è % vol = (OG − FG) × 131,25. La <strong>formula alternativa</strong> (Hall, 1995) è % vol = 76,08 × (OG − FG) / (1,775 − OG) × FG / 0,794. A densità basse danno lo stesso risultato, sopra 1,070 circa si separano.</p>
+<p>Le ho confrontate con lo zucchero davvero presente nel mosto. Per mosti d’uva, di frutta e di mele la formula standard è più vicina (errore medio 0,24 % rispetto all’alcol potenziale OIV da 1,080 a 1,110), perché il succo contiene dall’8 al 12 % di solidi che non sono zucchero. Per idromele e mosti di zucchero è più vicina la formula alternativa: da 1,100 a 0,996 dà 14,7 % dove la standard dice 13,7 %. È la differenza dietro il classico “il mio idromele è più forte di quello che dice il calcolatore”.</p>
+<h3>Zucchero o miele aggiunti dopo</h3>
+<p>Ogni grammo aggiunto dopo la lettura iniziale alza la densità da cui il lievito è partito davvero. Demijohn calcola una OG effettiva con un bilancio di massa: il lotto come massa del mosto e solidi disciolti dalla curva del Brix NBS, più i solidi di ogni aggiunta (zucchero 100 %, miele 82,8 %). La gradazione si calcola poi da quella OG effettiva.</p>
+<h3>Temperatura</h3>
+<p>Un mostimetro è giusto solo alla sua temperatura di taratura, che di solito è stampata sulla scala. Un liquido caldo si dilata e diventa più leggero, quindi il mostimetro affonda di più e legge basso; un liquido freddo legge alto. Prima di calcolare la gradazione le letture vengono corrette con la Tabella 110 NBS per le soluzioni zuccherine.</p>
+<p>Molti calcolatori usano una formula ricavata dalla dilatazione dell’acqua pura. Le soluzioni zuccherine si dilatano più dell’acqua, quindi su un mosto quella formula corregge troppo poco: da 0,2 a 0,5 punti per un campione lontano da 5 a 10 gradi. Per esempio, 1,080 letto a 27 °C su un mostimetro tarato a 20 °C diventa 1,082.</p>
+<h3>Letture col rifrattometro</h3>
+<p>Quando c’è alcol il rifrattometro legge alto, quindi una FG presa col rifrattometro e messa così com’è in una formula della gradazione è sbagliata. Per la lettura finale usa il mostimetro, oppure la correzione del rifrattometro nell’app (formula di Terrill, con un avviso fuori dall’intervallo su cui è stata ricavata).</p>
+<h3>Quanto è affidabile il numero?</h3>
+<p>Ogni gradazione è una stima. I lieviti trasformano da 16,5 a 17,2 g/L di zucchero in 1 % di alcol (AWRI), quindi leggi il risultato come ±2 % del suo valore. Sopra 1,130 circa le tre formule si allontanano di più di 1 % vol e il calcolatore te lo dice.</p>
+<nav class="next" aria-label="La domanda successiva"><p class="next-h">La domanda successiva</p><ul><li><a href="../../it/tabella-babo/">Tabella Babo e scale<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../it/quanto-zucchero/">Quanto zucchero o miele<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">Nell’app</h2>
+<p>In Demijohn la densità iniziale, ogni lettura e ogni aggiunta di zucchero o miele sono già nel lotto: gradazione e attenuazione si aggiornano a ogni lettura, e le aggiunte a più riprese vengono contate senza che tu faccia niente.</p>
+<p class="small">Gratis: lotti e letture illimitati, tutti questi calcolatori. Pro si paga una volta, senza abbonamento. Niente account, funziona offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Prossimamente</b></a><span class="store soon"><small>App Store</small><b>Più avanti</b></span></div>
+</aside>
+<h2>Fonti</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.</p>
+<p class="updated">Verificato sulle fonti: 25 ottobre 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Questa pagina in:</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.</p>
+<p>Demijohn è un diario dei lotti e un calcolatore di fermentazione per vino fatto in casa, idromele e sidro, fatto da Mufatech. Questo sito non usa cookie e non carica nulla da altri server.</p>
+<nav aria-label="Sito"><a href="../../it/">Demijohn</a><a href="../../it/calcolatori/">Calcolatori</a><a href="../../it/support/">Assistenza</a><a href="../../it/privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

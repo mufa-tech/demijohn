@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Hydrometer Temperature Correction Calculator (Wine, Mead)</title>
+<meta name="description" content="Correct a hydrometer reading for sample temperature, for 60 °F or 20 °C hydrometers. Uses the NBS table for sugar solutions, not the water-only formula.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/spindel-temperaturkorrektur/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/korekta-temperatury-cukromierza/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preload" href="../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Hydrometer Temperature Correction Calculator (Wine, Mead)">
+<meta property="og:description" content="Correct a hydrometer reading for sample temperature, for 60 °F or 20 °C hydrometers. Uses the NBS table for sugar solutions, not the water-only formula.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Main"><a href="../calculators/" aria-current="page">Calculators</a><a href="../mead-for-beginners/">Mead guide</a><a href="../support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>EN</span></summary><nav aria-label="Language"><a href="../hydrometer-temperature/" hreflang="en" lang="en" aria-current="true">English</a><a href="../de/spindel-temperaturkorrektur/" hreflang="de" lang="de">Deutsch</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/" hreflang="it" lang="it">Italiano</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../pl/korekta-temperatury-cukromierza/" hreflang="pl" lang="pl">Polski</a><a href="../sv/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../">Demijohn</a> / <a href="../calculators/">Calculators</a></p>
+<h1>Hydrometer temperature correction</h1>
+<p class="lead">A hydrometer reads true only at the temperature it was calibrated for. Enter the reading and the sample temperature to get the corrected gravity.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="hydro" novalidate>
+<div class="field "><label for="reading">Hydrometer reading</label>
+<div class="joined"><input id="reading" name="reading" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.080" required aria-describedby="reading-hint reading-err"><select id="reading-scale" name="reading-scale" aria-label="Gravity scale"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="plato">°Plato</option><option value="oechsle">°Oechsle</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="reading-hint">As read at the bottom of the meniscus.</span><span class="err" id="reading-err" hidden></span></div>
+<div class="field "><label for="temp">Sample temperature</label>
+<div class="joined"><input id="temp" name="temp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="81" required aria-describedby="temp-hint temp-err"><select id="t-unit" name="t-unit" aria-label="Temperature unit"><option value="C">°C</option><option value="F" selected>°F</option></select></div>
+<span class="hint" id="temp-hint">Measured in the sample, not the room.</span><span class="err" id="temp-err" hidden></span></div>
+<fieldset class="choice"><legend>Hydrometer calibrated at</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20"><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555" checked><span>60 °F (15.6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Result</h2>
+<div id="calc-nojs" class="callout"><p>This calculator needs JavaScript. The method below shows how to work it out by hand.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Runs in your browser. Nothing you type is sent or saved.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"en-US","decimal":".","units":{"volume":"usgal","temp":"F"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Grape wine","fruit":"Fruit wine","cider":"Cider or perry","mead":"Mead","sugar":"Sugar wine"},"sweet":{"sugar":"Sugar","honey":"Honey"},"unitNames":{"L":"litres","usgal":"US gallons","impgal":"UK gallons"},"disclaimer":"Doses are estimates. Add in steps, test again, follow the product label. For personal use only.","volPct":"% ABV","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warning","stop":"Stop","info":"Note","good":"OK"},"howTitle":"How it was calculated","sourceLabel":"Source","fillIn":"Fill in the fields to see the result.","fixErrors":"Fix the fields marked above to see the result.","errNumber":"Type a number, like {example}.","errRange":"Use a value from {min} to {max}.","errGravity":"On the {scale} scale this calculator works from {min} to {max}.","issues":{"outOfRange":"This is outside the range the formula is valid for.","invalidInput":"One of the values can’t be used here.","fgAboveOg":"The final reading is higher than the original gravity. Check both readings and the scale.","extrapolated":"Below 1.000 the Brix curve is extrapolated. Trust the SG figure.","formulasDisagree":"At this original gravity the formulas differ by more than 1 % ABV. Read the result as a range.","honeyMoistureUnusual":"That moisture is outside the 13.4 to 22.9 % found in honey surveys. Check the reading.","alreadyAboveTarget":"The must is already at or above this target. Nothing to add.","targetBelowCurrent":"The target is below the current gravity.","tempOut":"The {what} temperature is outside 0 to 40 °C (32 to 104 °F). Bring the sample to 15 to 25 °C and read again.","paOut":"That potential alcohol is beyond what a must can hold. Use a lower target."},"lowConfidence":"The {what} sample is outside 10 to 35 °C, so a simpler water-only correction is used. Bring the sample to 15 to 25 °C for a better reading.","potential":"Potential alcohol","highPa":"Above about 15 % most yeasts stop before the sugar is gone, so the result stays sweet.","stepFeed":"For mead, many makers add part of the honey at the start and the rest in steps. Log each addition: the ABV calculator counts it.","honeyAmount":"Honey","waterAmount":"Water","howTargetSugar":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L fermentable sugar, reached at {target} in a sugar or honey must.","howTargetOiv":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L sugar, which OIV Table II puts at {target} for grape or fruit must.","srcSugar":"NBS C440 Brix curve (mass balance), National Honey Board honey composition, OIV 16.83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Table II, OIV 16.83 g/L per % vol","reading":"sample","correctedH":"Corrected reading","correctedWhat":"At the calibration temperature of {cal}.","calNames":{"15":"15 °C","20":"20 °C","15.555555555555555":"60 °F"},"asSg":"As SG","change":"Correction","pointsWord":"points","above35":"Above 35 °Brix the table’s last column is used.","howNbs":"Reading = {bx} °Bx. NBS Table 110: {cs} at the sample temperature, {cc} at the calibration temperature. {bx} {cs} − ({cc}) = {bc} °Bx = {sg}.","howWater":"{r} × water density at calibration {a} / water density at the sample {b} = {sg}.","srcNbs":"NBS Circular C440 Table 110; cross-check OIV-MA-AS2-01B Table VI","srcWater":"Water density, Tanaka et al. 2001"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">How it’s worked out</h2>
+<h3>Why a correction at all</h3>
+<p>Warm liquid expands and gets lighter, so the hydrometer sinks deeper and reads low. Cold liquid reads high. The glass of the hydrometer expands a little too.</p>
+<h3>Why not the usual formula</h3>
+<p>Most calculators use a formula fitted to the expansion of pure water. Sugar solutions expand more than water, so at must gravities that formula under-corrects by 0.2 to 0.5 points for a sample 5 to 10 degrees off. Demijohn uses NBS Table 110, measured for sugar solutions from 0 to 35 % sugar and 10 to 35 °C, with the glass included. Between rows the table is interpolated.</p>
+<p>For a 60 °F or other hydrometer the table correction at its calibration temperature is subtracted, the transfer rule printed under the NBS table.</p>
+<h3>Outside 10 to 35 °C</h3>
+<p>From 0 to 10 °C and 35 to 40 °C there is no table, so a water-density ratio is used and the result is marked as less certain. Beyond 0 to 40 °C the calculator stops: bring the sample to 15 to 25 °C and read again.</p>
+<h3>Finished wine</h3>
+<p>Alcohol expands more than water too. At 5 degrees off, the correction for a finished dry wine is about 0.3 points short. That is below what most hobby hydrometers can show, but read finished wine near the calibration temperature when you can.</p>
+<nav class="next" aria-label="Next question"><p class="next-h">Next question</p><ul><li><a href="../abv/">ABV from OG and FG<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../oechsle/">Gravity scales and table<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In the app</h2>
+<p>In Demijohn you type the temperature with the reading and the correction runs as you type. Each hydrometer’s calibration is saved once, so you never pick it again.</p>
+<p class="small">Free: unlimited batches and readings, all of these calculators. Pro is one payment, no subscription. No account, works offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Coming soon</b></a><span class="store soon"><small>App Store</small><b>Coming later</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2468/oiv-ma-as2-01b.pdf" rel="noopener">OIV-MA-AS2-01B, Tables V and VI: hydrometer temperature corrections</a></li><li><a href="https://doi.org/10.1088/0026-1394/38/4/3" rel="noopener">Tanaka et al., Metrologia 38 (2001) 301: density of water</a></li></ol>
+<p class="callout">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p class="updated">Checked against the sources: October 25, 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>This page in:</span> <a href="../de/spindel-temperaturkorrektur/" hreflang="de" lang="de">Deutsch</a><a href="../pl/korekta-temperatury-cukromierza/" hreflang="pl" lang="pl">Polski</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p>Demijohn is a batch log and fermentation calculator for home wine, mead and cider, made by Mufatech. This site sets no cookies and loads nothing from other servers.</p>
+<nav aria-label="Site"><a href="../">Demijohn</a><a href="../calculators/">Calculators</a><a href="../switching/">Moving to Demijohn</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../assets/calc-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Free winemaking calculators: ABV, sugar, hydrometer</title>
+<meta name="description" content="ABV from OG and FG, sugar or honey for a target, hydrometer temperature correction and a gravity scale table. Same maths as the Demijohn app.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/calculators/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/calculators/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/rechner/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calculateurs/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/rekenhulpen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolatori/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calculadoras/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/kalkulatory/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/kalkylatorer/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/calculators/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preload" href="../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Free winemaking calculators: ABV, sugar, hydrometer">
+<meta property="og:description" content="ABV from OG and FG, sugar or honey for a target, hydrometer temperature correction and a gravity scale table. Same maths as the Demijohn app.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/calculators/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Main"><a href="../calculators/" aria-current="page">Calculators</a><a href="../mead-for-beginners/">Mead guide</a><a href="../support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>EN</span></summary><nav aria-label="Language"><a href="../calculators/" hreflang="en" lang="en" aria-current="true">English</a><a href="../de/rechner/" hreflang="de" lang="de">Deutsch</a><a href="../fr/calculateurs/" hreflang="fr" lang="fr">Français</a><a href="../nl/rekenhulpen/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/calcolatori/" hreflang="it" lang="it">Italiano</a><a href="../es/calculadoras/" hreflang="es" lang="es">Español</a><a href="../pl/kalkulatory/" hreflang="pl" lang="pl">Polski</a><a href="../sv/kalkylatorer/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../">Demijohn</a></p>
+<h1>Calculators for wine, mead and cider</h1>
+<p class="lead">The same formulas as the Demijohn app, with the source under every result. They run in your browser: nothing you type is sent or saved.</p>
+<ul class="calc-cards"><li><a class="card calc-card" href="../abv/"><span class="cc-h">ABV from OG and FG<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Standard and alternate formula, temperature correction, step feeds.</span></a></li><li><a class="card calc-card" href="../sugar/"><span class="cc-h">How much sugar or honey<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">For a target gravity or potential alcohol, with the new volume.</span></a></li><li><a class="card calc-card" href="../hydrometer-temperature/"><span class="cc-h">Hydrometer temperature<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Correct a reading taken warm or cold, 60 °F or 20 °C hydrometers.</span></a></li><li><a class="card calc-card" href="../oechsle/"><span class="cc-h">Gravity scales and table<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">SG, Brix, Plato, Oechsle, Babo, Baumé, with potential alcohol.</span></a></li><li><a class="card calc-card" href="../mead-for-beginners/"><span class="cc-h">Mead for beginners<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span class="cc-p">Honey for your batch, nutrients in steps, finishing and bottling.</span></a></li></ul>
+<div class="prose gap-top">
+<h2>Which one first</h2>
+<ol>
+<li><strong>Read the hydrometer at the right temperature.</strong> If the sample is warmer or colder than your hydrometer’s calibration, correct it with the <a href="../hydrometer-temperature/">temperature calculator</a>.</li>
+<li><strong>Set the start.</strong> The <a href="../sugar/">sugar and honey calculator</a> gives the amount for a target gravity or potential alcohol.</li>
+<li><strong>Measure the end.</strong> The <a href="../abv/">ABV calculator</a> works from your OG and your latest reading, including sugar or honey you added on the way.</li>
+<li><strong>Another scale on the label or in a book?</strong> The <a href="../oechsle/">converter and table</a> covers SG, Brix, Plato, Oechsle, Babo and Baumé.</li>
+</ol>
+<p class="callout">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>This page in:</span> <a href="../de/rechner/" hreflang="de" lang="de">Deutsch</a><a href="../fr/calculateurs/" hreflang="fr" lang="fr">Français</a><a href="../nl/rekenhulpen/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/calcolatori/" hreflang="it" lang="it">Italiano</a><a href="../es/calculadoras/" hreflang="es" lang="es">Español</a><a href="../pl/kalkulatory/" hreflang="pl" lang="pl">Polski</a><a href="../sv/kalkylatorer/" hreflang="sv" lang="sv">Svenska</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p>Demijohn is a batch log and fermentation calculator for home wine, mead and cider, made by Mufatech. This site sets no cookies and loads nothing from other servers.</p>
+<nav aria-label="Site"><a href="../">Demijohn</a><a href="../calculators/">Calculators</a><a href="../switching/">Moving to Demijohn</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+
+</body>
+</html>

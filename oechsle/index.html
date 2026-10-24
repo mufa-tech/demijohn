@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>SG, Brix, Oechsle, Baumé Converter and Table</title>
+<meta name="description" content="Convert specific gravity, Brix, Plato, Oechsle, Babo and Baumé, with potential alcohol for grape must and for honey. Printable table 1.000 to 1.130.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/oechsle/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/oechsle/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/oechsle-tabelle/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/tabella-babo/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/tabela-blg/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/oechsle/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preload" href="../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="SG, Brix, Oechsle, Baumé Converter and Table">
+<meta property="og:description" content="Convert specific gravity, Brix, Plato, Oechsle, Babo and Baumé, with potential alcohol for grape must and for honey. Printable table 1.000 to 1.130.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/oechsle/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Main"><a href="../calculators/" aria-current="page">Calculators</a><a href="../mead-for-beginners/">Mead guide</a><a href="../support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>EN</span></summary><nav aria-label="Language"><a href="../oechsle/" hreflang="en" lang="en" aria-current="true">English</a><a href="../de/oechsle-tabelle/" hreflang="de" lang="de">Deutsch</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/tabella-babo/" hreflang="it" lang="it">Italiano</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../pl/tabela-blg/" hreflang="pl" lang="pl">Polski</a><a href="../sv/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../">Demijohn</a> / <a href="../calculators/">Calculators</a></p>
+<h1>Gravity scale converter: SG, Brix, Oechsle, Baumé</h1>
+<p class="lead">Type a reading in any scale to see it in the others, with the potential alcohol. The table below works without JavaScript and prints on one page.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="scales" novalidate>
+<div class="field "><label for="value">Reading</label>
+<div class="joined"><input id="value" name="value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.085" required aria-describedby="value-hint value-err"><select id="value-scale" name="value-scale" aria-label="Gravity scale"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="plato">°Plato</option><option value="oechsle">°Oechsle</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="value-hint">In the scale picked next to it.</span><span class="err" id="value-err" hidden></span></div>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Result</h2>
+<div id="calc-nojs" class="callout"><p>This calculator needs JavaScript. The method below shows how to work it out by hand.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Runs in your browser. Nothing you type is sent or saved.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"en-US","decimal":".","units":{"volume":"usgal","temp":"F"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Grape wine","fruit":"Fruit wine","cider":"Cider or perry","mead":"Mead","sugar":"Sugar wine"},"sweet":{"sugar":"Sugar","honey":"Honey"},"unitNames":{"L":"litres","usgal":"US gallons","impgal":"UK gallons"},"disclaimer":"Doses are estimates. Add in steps, test again, follow the product label. For personal use only.","volPct":"% ABV","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warning","stop":"Stop","info":"Note","good":"OK"},"howTitle":"How it was calculated","sourceLabel":"Source","fillIn":"Fill in the fields to see the result.","fixErrors":"Fix the fields marked above to see the result.","errNumber":"Type a number, like {example}.","errRange":"Use a value from {min} to {max}.","errGravity":"On the {scale} scale this calculator works from {min} to {max}.","issues":{"outOfRange":"This is outside the range the formula is valid for.","invalidInput":"One of the values can’t be used here.","fgAboveOg":"The final reading is higher than the original gravity. Check both readings and the scale.","extrapolated":"Below 1.000 the Brix curve is extrapolated. Trust the SG figure.","formulasDisagree":"At this original gravity the formulas differ by more than 1 % ABV. Read the result as a range.","honeyMoistureUnusual":"That moisture is outside the 13.4 to 22.9 % found in honey surveys. Check the reading.","alreadyAboveTarget":"The must is already at or above this target. Nothing to add.","targetBelowCurrent":"The target is below the current gravity.","tempOut":"The {what} temperature is outside 0 to 40 °C (32 to 104 °F). Bring the sample to 15 to 25 °C and read again.","paOut":"That potential alcohol is beyond what a must can hold. Use a lower target."},"lowConfidence":"The {what} sample is outside 10 to 35 °C, so a simpler water-only correction is used. Bring the sample to 15 to 25 °C for a better reading.","potential":"Potential alcohol","highPa":"Above about 15 % most yeasts stop before the sugar is gone, so the result stays sweet.","stepFeed":"For mead, many makers add part of the honey at the start and the rest in steps. Log each addition: the ABV calculator counts it.","honeyAmount":"Honey","waterAmount":"Water","howTargetSugar":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L fermentable sugar, reached at {target} in a sugar or honey must.","howTargetOiv":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L sugar, which OIV Table II puts at {target} for grape or fruit must.","srcSugar":"NBS C440 Brix curve (mass balance), National Honey Board honey composition, OIV 16.83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Table II, OIV 16.83 g/L per % vol","converterScales":["sg","brix","plato","oechsle","kmw","baume"],"convertedH":"In every scale","potentialH":"Potential alcohol","paGrape":"Grape or fruit must","paGrapeNone":"below the OIV table","paSugar":"Sugar must","paHoney":"Honey must","howScales":"SG {sg} = {bx} °Bx (NBS fit) = {oe} °Oe = {be} °Bé.","srcScales":"NBS C440 Brix fit, Buhl Plato fit, Babo relation, OIV-MA-AS2-02 Table II"}</script>
+<section class="prose gap-top" aria-labelledby="table-h"><h2 id="table-h">Conversion table</h2>
+<p>SG 20/20 from 1.000 to 1.130. Potential alcohol: grape or fruit must from OIV Table II, honey must from honey’s sugar content, both at 16.83 g/L per % ABV.</p>
+<div class="table-wrap" role="region" aria-labelledby="table-h" tabindex="0"><table class="num-table">
+<thead><tr><th scope="col">SG</th><th scope="col">°Brix</th><th scope="col">°Oechsle</th><th scope="col">°Baumé</th><th scope="col">Potential % (grape)</th><th scope="col">Potential % (honey)</th></tr></thead>
+<tbody><tr><td>1.000</td><td>0</td><td>0</td><td>0</td><td>–</td><td>0.0</td></tr>
+<tr><td>1.005</td><td>1.3</td><td>5</td><td>0.7</td><td>–</td><td>0.7</td></tr>
+<tr><td>1.010</td><td>2.6</td><td>10</td><td>1.4</td><td>–</td><td>1.4</td></tr>
+<tr><td>1.015</td><td>3.8</td><td>15</td><td>2.1</td><td>–</td><td>2.2</td></tr>
+<tr><td>1.020</td><td>5.1</td><td>20</td><td>2.8</td><td>–</td><td>2.9</td></tr>
+<tr><td>1.025</td><td>6.3</td><td>25</td><td>3.5</td><td>–</td><td>3.6</td></tr>
+<tr><td>1.030</td><td>7.6</td><td>30</td><td>4.2</td><td>–</td><td>4.3</td></tr>
+<tr><td>1.035</td><td>8.8</td><td>35</td><td>4.9</td><td>–</td><td>5.1</td></tr>
+<tr><td>1.040</td><td>10</td><td>40</td><td>5.6</td><td>–</td><td>5.8</td></tr>
+<tr><td>1.045</td><td>11.2</td><td>45</td><td>6.2</td><td>5.5</td><td>6.5</td></tr>
+<tr><td>1.050</td><td>12.4</td><td>50</td><td>6.9</td><td>6.3</td><td>7.3</td></tr>
+<tr><td>1.055</td><td>13.6</td><td>55</td><td>7.6</td><td>7.1</td><td>8.0</td></tr>
+<tr><td>1.060</td><td>14.7</td><td>60</td><td>8.2</td><td>7.8</td><td>8.7</td></tr>
+<tr><td>1.065</td><td>15.9</td><td>65</td><td>8.8</td><td>8.6</td><td>9.5</td></tr>
+<tr><td>1.070</td><td>17.1</td><td>70</td><td>9.5</td><td>9.3</td><td>10.2</td></tr>
+<tr><td>1.075</td><td>18.2</td><td>75</td><td>10.1</td><td>10.1</td><td>10.9</td></tr>
+<tr><td>1.080</td><td>19.3</td><td>80</td><td>10.7</td><td>10.8</td><td>11.7</td></tr>
+<tr><td>1.085</td><td>20.5</td><td>85</td><td>11.4</td><td>11.6</td><td>12.4</td></tr>
+<tr><td>1.090</td><td>21.6</td><td>90</td><td>12</td><td>12.3</td><td>13.1</td></tr>
+<tr><td>1.095</td><td>22.7</td><td>95</td><td>12.6</td><td>13.1</td><td>13.9</td></tr>
+<tr><td>1.100</td><td>23.8</td><td>100</td><td>13.2</td><td>13.8</td><td>14.6</td></tr>
+<tr><td>1.105</td><td>24.9</td><td>105</td><td>13.8</td><td>14.6</td><td>15.4</td></tr>
+<tr><td>1.110</td><td>25.9</td><td>110</td><td>14.4</td><td>15.3</td><td>16.1</td></tr>
+<tr><td>1.115</td><td>27</td><td>115</td><td>15</td><td>16.0</td><td>16.8</td></tr>
+<tr><td>1.120</td><td>28.1</td><td>120</td><td>15.5</td><td>16.8</td><td>17.6</td></tr>
+<tr><td>1.125</td><td>29.1</td><td>125</td><td>16.1</td><td>17.5</td><td>18.3</td></tr>
+<tr><td>1.130</td><td>30.2</td><td>130</td><td>16.7</td><td>18.2</td><td>19.1</td></tr></tbody></table></div></section>
+<div class="prose gap-top">
+<h2 id="method">How it’s worked out</h2>
+<h3>SG and Brix</h3>
+<p>°Brix = ((182.46007 × SG − 775.68212) × SG + 1262.7794) × SG − 669.56218, a fit to the NBS sugar tables accurate to 0.002 °Bx up to SG 1.179. The reverse is solved exactly. The “gravity points ÷ 4” shortcut is close at 1.040 but 0.67 °Bx too high at 1.080 and 1.9 too high at 1.120.</p>
+<h3>Plato, Balling and Blg</h3>
+<p>Plato uses Buhl’s fit to the brewing tables. Brix, Balling (Blg in Poland) and Plato are the same idea, sugar as a percentage of mass, and differ by less than 0.02 between 1.000 and 1.120.</p>
+<h3>Oechsle, Babo and Baumé</h3>
+<p>°Oechsle = 1000 × (SG − 1). Babo (KMW, used in Austria and Italy) relates to it as °Oe = KMW × (4.54 + 0.022 × KMW). Baumé is the heavy scale with modulus 145: °Bé = 145 × (1 − 1/SG).</p>
+<h3>Potential alcohol</h3>
+<p>Grape must holds non-sugar solids, so the same gravity means less sugar than in a honey or sugar must. The grape column uses OIV Table II (from 1.041; below that the table has no rows). The honey column uses honey’s sugar content.</p>
+<nav class="next" aria-label="Next question"><p class="next-h">Next question</p><ul><li><a href="../sugar/">How much sugar or honey<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../abv/">ABV from OG and FG<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In the app</h2>
+<p>In Demijohn every reading can be typed in any of these scales and shown in another. The scale is saved per batch and never resets with an update.</p>
+<p class="small">Free: unlimited batches and readings, all of these calculators. Pro is one payment, no subscription. No account, works offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Coming soon</b></a><span class="store soon"><small>App Store</small><b>Coming later</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://de.wikipedia.org/wiki/Grad_Oechsle" rel="noopener">Wikipedia (de), “Grad Oechsle”</a></li><li><a href="https://de.wikipedia.org/wiki/Klosterneuburger_Mostwaage" rel="noopener">Wikipedia (de), “Klosterneuburger Mostwaage” (Babo relation)</a></li><li><a href="https://www.oiv.int/public/medias/2469/oiv-ma-as2-02.pdf" rel="noopener">OIV-MA-AS2-02, Table II: Brix, must density, sugar and potential alcohol</a></li></ol>
+<p class="callout">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p class="updated">Checked against the sources: October 25, 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>This page in:</span> <a href="../de/oechsle-tabelle/" hreflang="de" lang="de">Deutsch</a><a href="../it/tabella-babo/" hreflang="it" lang="it">Italiano</a><a href="../pl/tabela-blg/" hreflang="pl" lang="pl">Polski</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p>Demijohn is a batch log and fermentation calculator for home wine, mead and cider, made by Mufatech. This site sets no cookies and loads nothing from other servers.</p>
+<nav aria-label="Site"><a href="../">Demijohn</a><a href="../calculators/">Calculators</a><a href="../switching/">Moving to Demijohn</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../assets/calc-ui.js"></script>
+</body>
+</html>

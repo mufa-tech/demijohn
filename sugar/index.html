@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>How Much Sugar or Honey? Wine and Mead Calculator</title>
+<meta name="description" content="How much sugar or honey to add to wine, mead or cider for a target gravity or potential alcohol, by exact mass balance, with the new volume.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/wieviel-zucker/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/combien-de-sucre/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/quanto-zucchero/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/cuanto-azucar/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/ile-cukru/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/hur-mycket-socker/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preload" href="../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="How Much Sugar or Honey? Wine and Mead Calculator">
+<meta property="og:description" content="How much sugar or honey to add to wine, mead or cider for a target gravity or potential alcohol, by exact mass balance, with the new volume.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/sugar/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Main"><a href="../calculators/" aria-current="page">Calculators</a><a href="../mead-for-beginners/">Mead guide</a><a href="../support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>EN</span></summary><nav aria-label="Language"><a href="../sugar/" hreflang="en" lang="en" aria-current="true">English</a><a href="../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../fr/combien-de-sucre/" hreflang="fr" lang="fr">Français</a><a href="../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a><a href="../sv/hur-mycket-socker/" hreflang="sv" lang="sv">Svenska</a><a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../">Demijohn</a> / <a href="../calculators/">Calculators</a></p>
+<h1>How much sugar or honey to add</h1>
+<p class="lead">Enter the volume and the gravity you have now, then the alcohol or gravity you want. The result is the sugar or honey to add and the volume you end up with.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="sugar" novalidate>
+<fieldset class="choice"><legend>What are you making?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Grape wine</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Fruit wine</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cider or perry</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mead</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Sugar wine</span></label></div></fieldset>
+<div class="field "><label for="vol">Batch volume</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="5" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volume unit"><option value="L">litres</option><option value="usgal" selected>US gallons</option><option value="impgal">UK gallons</option></select></div>
+<span class="hint" id="vol-hint">What is in the fermenter now.</span><span class="err" id="vol-err" hidden></span></div>
+<div class="field "><label for="now">Gravity now</label>
+<div class="joined"><input id="now" name="now" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.050" required aria-describedby="now-hint now-err"><select id="now-scale" name="now-scale" aria-label="Gravity scale"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="plato">°Plato</option><option value="oechsle">°Oechsle</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="now-hint">Juice, must or water. Water is 1.000.</span><span class="err" id="now-err" hidden></span></div>
+<fieldset class="choice"><legend>Your target</legend><div class="pills"><label class="pill"><input type="radio" name="target-kind" value="pa" checked><span>Potential alcohol</span></label><label class="pill"><input type="radio" name="target-kind" value="sg"><span>Gravity</span></label></div></fieldset>
+<div data-show="pa"><div class="field "><label for="target-pa">Target potential alcohol (% ABV)</label>
+<input id="target-pa" name="target-pa" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="12" required aria-describedby="target-pa-hint target-pa-err">
+<span class="hint" id="target-pa-hint">If every gram of sugar ferments.</span><span class="err" id="target-pa-err" hidden></span></div></div>
+<div data-show="sg" hidden><div class="field "><label for="target-sg">Target gravity</label>
+<input id="target-sg" name="target-sg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.090" aria-describedby="target-sg-hint target-sg-err">
+<span class="hint" id="target-sg-hint">Same scale as the reading above.</span><span class="err" id="target-sg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Add</legend><div class="pills"><label class="pill"><input type="radio" name="sweet" value="sugar" checked><span>Sugar</span></label><label class="pill"><input type="radio" name="sweet" value="honey"><span>Honey</span></label></div></fieldset>
+<details class="more"><summary>Know your honey’s moisture?</summary><div class="field "><label for="moist">Honey moisture (%)</label>
+<input id="moist" name="moist" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="17.2" aria-describedby="moist-hint moist-err">
+<span class="hint" id="moist-hint">Average honey is 17.2 %. A honey refractometer reads it directly.</span><span class="err" id="moist-err" hidden></span></div></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Result</h2>
+<div id="calc-nojs" class="callout"><p>This calculator needs JavaScript. The method below shows how to work it out by hand.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Runs in your browser. Nothing you type is sent or saved.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"en-US","decimal":".","units":{"volume":"usgal","temp":"F"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Grape wine","fruit":"Fruit wine","cider":"Cider or perry","mead":"Mead","sugar":"Sugar wine"},"sweet":{"sugar":"Sugar","honey":"Honey"},"unitNames":{"L":"litres","usgal":"US gallons","impgal":"UK gallons"},"disclaimer":"Doses are estimates. Add in steps, test again, follow the product label. For personal use only.","volPct":"% ABV","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warning","stop":"Stop","info":"Note","good":"OK"},"howTitle":"How it was calculated","sourceLabel":"Source","fillIn":"Fill in the fields to see the result.","fixErrors":"Fix the fields marked above to see the result.","errNumber":"Type a number, like {example}.","errRange":"Use a value from {min} to {max}.","errGravity":"On the {scale} scale this calculator works from {min} to {max}.","issues":{"outOfRange":"This is outside the range the formula is valid for.","invalidInput":"One of the values can’t be used here.","fgAboveOg":"The final reading is higher than the original gravity. Check both readings and the scale.","extrapolated":"Below 1.000 the Brix curve is extrapolated. Trust the SG figure.","formulasDisagree":"At this original gravity the formulas differ by more than 1 % ABV. Read the result as a range.","honeyMoistureUnusual":"That moisture is outside the 13.4 to 22.9 % found in honey surveys. Check the reading.","alreadyAboveTarget":"The must is already at or above this target. Nothing to add.","targetBelowCurrent":"The target is below the current gravity.","tempOut":"The {what} temperature is outside 0 to 40 °C (32 to 104 °F). Bring the sample to 15 to 25 °C and read again.","paOut":"That potential alcohol is beyond what a must can hold. Use a lower target."},"lowConfidence":"The {what} sample is outside 10 to 35 °C, so a simpler water-only correction is used. Bring the sample to 15 to 25 °C for a better reading.","potential":"Potential alcohol","highPa":"Above about 15 % most yeasts stop before the sugar is gone, so the result stays sweet.","stepFeed":"For mead, many makers add part of the honey at the start and the rest in steps. Log each addition: the ABV calculator counts it.","honeyAmount":"Honey","waterAmount":"Water","howTargetSugar":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L fermentable sugar, reached at {target} in a sugar or honey must.","howTargetOiv":"{pa} % potential alcohol × 16.83 g/L = {sugar} g/L sugar, which OIV Table II puts at {target} for grape or fruit must.","srcSugar":"NBS C440 Brix curve (mass balance), National Honey Board honey composition, OIV 16.83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Table II, OIV 16.83 g/L per % vol","howChaptalize":"Must at {now} is {brix} °Bx on OIV Table II, {sugar} g/L sugar. Target {pa} % × 16.83 = {target} g/L. OIV chaptalisation formula with 1.0526 g invert sugar per g of sugar and 0.617 mL per g dissolved.","howRaise":"{from} = {b0} °Bx, {to} = {b1} °Bx. Must mass {must} g. Grams = {must} × ({b1} − {b0}) / (100 × {f} − {b1}).","addH":"Add","addSugar":"of sugar (sucrose), dissolved in some of the must.","addHoney":"of honey, mixed in some warm water or must.","newGravity":"Gravity after adding","newVolume":"Volume after adding","dilute":"To come down to {to}, add about {water} of water instead."}</script>
+
+<div class="prose gap-top">
+<h2 id="method">How it’s worked out</h2>
+<h3>An exact mass balance</h3>
+<p>Brix is the mass percentage of dissolved sugar, so the amount follows from a balance, not from a rule of thumb. The must weighs V × SG × 998.203 g. To go from Brix B0 to B1 with a sweetener that is a fraction f sugar: grams = must mass × (B1 − B0) / (100 × f − B1). Sugar is f = 1; honey is f = 0.828, because average honey is 17.2 % water.</p>
+<p>The common “1.000 to 1.090 needs a fixed amount per gallon” rules ignore that the sugar also adds volume. For 1 L of water to 1.090 the balance gives 275 g of sugar and 1.17 L of must.</p>
+<h3>From potential alcohol to gravity</h3>
+<p>Potential alcohol is fermentable sugar ÷ 16.83 g/L, the OIV and EU convention. For grape and fruit musts the gravity that holds that much sugar comes from OIV Table II, because juice carries other solids too. For mead and sugar wine it comes from the sugar itself: honey is about 94 % fermentable sugar by solids.</p>
+<p>For grape musts already on the OIV table (from 1.041), the sugar is worked out with the OIV chaptalisation formula, which also counts the volume the sugar adds.</p>
+<h3>Above the target already</h3>
+<p>If the must is already above the target, the calculator tells you how much water brings it down instead. Water dilutes everything else too: acid, colour and flavour.</p>
+<h3>Honey in steps</h3>
+<p>A strong mead starts more easily below about 1.110. Many makers add part of the honey later, in two or three steps. The <a href="../abv/">ABV calculator</a> counts those additions, and the <a href="../mead-for-beginners/">mead guide</a> walks through it.</p>
+<nav class="next" aria-label="Next question"><p class="next-h">Next question</p><ul><li><a href="../abv/">ABV from OG and FG<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../mead-for-beginners/">Mead for beginners<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In the app</h2>
+<p>In Demijohn this calculator opens from the batch with its volume and last gravity filled in, and “Add to log” writes the amount as an addition. The ABV then counts it as part of the effective OG.</p>
+<p class="small">Free: unlimited batches and readings, all of these calculators. Pro is one payment, no subscription. No account, works offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Coming soon</b></a><span class="store soon"><small>App Store</small><b>Coming later</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2469/oiv-ma-as2-02.pdf" rel="noopener">OIV-MA-AS2-02, Table II: Brix, must density, sugar and potential alcohol</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://www.bjcp.org/mead/honeydefs.pdf" rel="noopener">National Honey Board, honey composition (White et al., USDA, 1962)</a></li><li><a href="https://homebrewersassociation.org/zymurgy/sweet-life-making-mead-easy-way/" rel="noopener">Piatz, S., “The Sweet Life”, Zymurgy, July/August 2011 (honey points per pound)</a></li></ol>
+<p class="callout">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p class="updated">Checked against the sources: October 25, 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>This page in:</span> <a href="../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../fr/combien-de-sucre/" hreflang="fr" lang="fr">Français</a><a href="../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a><a href="../sv/hur-mycket-socker/" hreflang="sv" lang="sv">Svenska</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doses are estimates. Add in steps, test again, follow the product label. For personal use only.</p>
+<p>Demijohn is a batch log and fermentation calculator for home wine, mead and cider, made by Mufatech. This site sets no cookies and loads nothing from other servers.</p>
+<nav aria-label="Site"><a href="../">Demijohn</a><a href="../calculators/">Calculators</a><a href="../switching/">Moving to Demijohn</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../assets/calc-ui.js"></script>
+</body>
+</html>

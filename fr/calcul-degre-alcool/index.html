@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Calcul du degré d’alcool au densimètre : vin, hydromel</title>
+<meta name="description" content="Degré d’alcool au densimètre à partir de la DI et de la DF, avec la bonne formule pour vin, hydromel ou cidre, la température et le sucre ajouté en cours.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Calcul du degré d’alcool au densimètre : vin, hydromel">
+<meta property="og:description" content="Degré d’alcool au densimètre à partir de la DI et de la DF, avec la bonne formule pour vin, hydromel ou cidre, la température et le sucre ajouté en cours.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-fr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../fr/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Principal"><a href="../../fr/calculateurs/" aria-current="page">Calculs</a><a href="../../fr/hydromel-maison/">Guide de l’hydromel</a><a href="../../fr/support/">Assistance</a></nav>
+<details class="langpick"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>FR</span></summary><nav aria-label="Langue"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr" aria-current="true">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../fr/">Demijohn</a> / <a href="../../fr/calculateurs/">Calculs</a></p>
+<h1>Calculer le degré d’alcool avec un densimètre</h1>
+<p class="lead">Entrez votre densité initiale et votre dernière mesure au densimètre. Demijohn applique la formule standard pour le raisin, les fruits et le cidre, la formule alternative pour l’hydromel et les moûts de sucre, et affiche les autres à côté.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Que faites-vous ?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape" checked><span>Vin de raisin</span></label><label class="pill"><input type="radio" name="must" value="fruit"><span>Vin de fruits</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cidre ou poiré</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Hydromel</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Vin de sucre</span></label></div></fieldset>
+<div class="field "><label for="og">Densité initiale (DI)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Échelle de densité"><option value="sg" selected>Densité (SG)</option><option value="baume">°Baumé</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="og-hint">Mesurée avant d’ajouter la levure.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Densité finale ou actuelle (DF)</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0,996" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Votre dernière mesure.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Mesures prises plus chaud ou plus froid que la température d’étalonnage du densimètre ?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Température à la DI</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Unité de température"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Température à cette mesure</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Densimètre étalonné à</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Laissez vide si l’échantillon était à la température d’étalonnage.</p></details>
+<details class="more"><summary>Du sucre ou du miel ajouté après la mesure de la DI ?</summary>
+<div class="field-row two"><div class="field "><label for="add">Quantité ajoutée au total</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Unité de masse"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Volume de la cuvée à la DI</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Unité de volume"><option value="L" selected>litres</option><option value="usgal">gallons US</option><option value="impgal">gallons impériaux</option></select></div>
+<span class="hint" id="vol-hint">Avant l’ajout.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Ce que vous avez ajouté</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Sucre</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Miel</span></label></div></fieldset>
+<p class="small">Le sucre ou le miel ajouté ensuite n’apparaît jamais dans la DI : le degré calculé avec la DI et la DF seules sort trop bas.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Résultat</h2>
+<div id="calc-nojs" class="callout"><p>Ce calcul demande JavaScript. La méthode ci-dessous montre comment le faire à la main.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Tourne dans votre navigateur. Rien de ce que vous tapez n’est envoyé ni enregistré.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"fr-FR","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"Densité (SG)","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Vin de raisin","fruit":"Vin de fruits","cider":"Cidre ou poiré","mead":"Hydromel","sugar":"Vin de sucre"},"sweet":{"sugar":"Sucre","honey":"Miel"},"unitNames":{"L":"litres","usgal":"gallons US","impgal":"gallons impériaux"},"disclaimer":"Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.","volPct":"% vol.","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Attention","stop":"Arrêt","info":"Remarque","good":"OK"},"howTitle":"Comment c’est calculé","sourceLabel":"Source","fillIn":"Remplissez les champs pour voir le résultat.","fixErrors":"Corrigez les champs signalés ci-dessus pour voir le résultat.","errNumber":"Tapez un nombre, par exemple {example}.","errRange":"Entrez une valeur de {min} à {max}.","errGravity":"Sur l’échelle {scale}, ce calcul va de {min} à {max}.","issues":{"outOfRange":"Cette valeur sort de la plage où la formule est valable.","invalidInput":"Une des valeurs ne peut pas être utilisée ici.","fgAboveOg":"La mesure finale est plus haute que la densité initiale. Vérifiez les deux mesures et l’échelle.","extrapolated":"Sous 1,000, la courbe Brix est extrapolée. Fiez-vous au chiffre en densité.","formulasDisagree":"À cette densité initiale, les formules diffèrent de plus de 1 % vol. Lisez le résultat comme une fourchette.","honeyMoistureUnusual":"Cette humidité sort des 13,4 à 22,9 % relevés dans les études sur le miel. Vérifiez la mesure.","alreadyAboveTarget":"Le moût est déjà à cette cible ou au-dessus. Rien à ajouter.","targetBelowCurrent":"La cible est sous la densité actuelle.","tempOut":"Température ({what}) hors de 0 à 40 °C (32 à 104 °F). Amenez l’échantillon entre 15 et 25 °C et mesurez à nouveau.","paOut":"Ce degré potentiel dépasse ce qu’un moût peut contenir. Visez plus bas."},"lowConfidence":"Échantillon ({what}) hors de 10 à 35 °C : une correction plus simple, basée sur l’eau seule, est utilisée. Amenez-le entre 15 et 25 °C pour une mesure plus fiable.","potential":"Alcool potentiel","highPa":"Au-delà de 15 % environ, la plupart des levures s’arrêtent avant la fin du sucre, et le résultat reste doux.","stepFeed":"Pour l’hydromel, beaucoup mettent une partie du miel au départ et le reste en plusieurs fois. Notez chaque ajout : le calcul du degré d’alcool le compte.","honeyAmount":"Miel","waterAmount":"Eau","howTargetSugar":"{pa} % d’alcool potentiel × 16,83 g/L = {sugar} g/L de sucre fermentescible, atteint à {target} dans un moût de sucre ou de miel.","howTargetOiv":"{pa} % d’alcool potentiel × 16,83 g/L = {sugar} g/L de sucre, que la table II de l’OIV place à {target} pour un moût de raisin ou de fruits.","srcSugar":"Courbe Brix NBS C440 (bilan de masse), composition du miel du National Honey Board, OIV 16,83 g/L par % vol.","srcOiv":"OIV-MA-AS2-02 table II, OIV 16,83 g/L par % vol.","ogShort":"DI","fgShort":"DF","howTemp":"{what} {from} corrigée selon la température : {to}.","needVolume":"Indiquez le volume de la cuvée pour compter le sucre ou le miel ajouté.","howEffective":"DI {og} plus {added} ajoutés ({solids} g de matières sèches dissoutes) = DI effective {eff}.","abvH":"Alcool","abvWhat":"{formula}, par défaut pour : {must}.","formulas":{"standard":"Formule standard","alternate":"Formule alternative","balling":"Formule de Balling"},"attenuation":"Atténuation apparente","refractometer":"Si cette mesure finale vient d’un réfractomètre, elle lit trop haut dès qu’il y a de l’alcool. Utilisez un densimètre.","howStandard":"({og} − {fg}) × 131,25 = {abv} % vol.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} % vol.","srcStandard":"Formule standard (DI − DF) × 131,25 ; plage de rendement AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (formule alternative) ; plage de rendement AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Comment c’est calculé</h2>
+<h3>Deux formules, et laquelle choisir</h3>
+<p>La <strong>formule standard</strong> : degré = (DI − DF) × 131,25. La <strong>formule alternative</strong> (Hall, 1995) : degré = 76,08 × (DI − DF) / (1,775 − DI) × DF / 0,794. Elles concordent à faible densité et s’écartent au-dessus de 1,070 environ.</p>
+<p>J’ai comparé les deux avec le sucre réellement présent dans le moût. Pour les moûts de raisin, de fruits et de cidre, la formule standard est plus proche (écart moyen de 0,24 % face à l’alcool potentiel OIV, de 1,080 à 1,110), car le jus contient 8 à 12 % de matières sèches qui ne sont pas du sucre. Pour l’hydromel et les moûts de sucre, la formule alternative est plus proche : de 1,100 à 0,996, elle donne 14,7 % là où la formule standard dit 13,7 %. Cet écart explique le classique « mon hydromel est plus fort que ce que dit le calculateur ».</p>
+<h3>Sucre ou miel ajouté plus tard</h3>
+<p>Chaque gramme ajouté après la mesure de la DI relève la densité dont la levure est vraiment partie. Demijohn calcule une DI effective par bilan de masse : la cuvée en masse de moût et en matières sèches dissoutes d’après la courbe Brix du NBS, plus les matières sèches de chaque ajout (sucre 100 %, miel 82,8 %). Le degré est ensuite calculé à partir de cette DI effective.</p>
+<h3>Température</h3>
+<p>Un densimètre n’est juste qu’à sa température d’étalonnage. Les mesures sont corrigées avec la table 110 du NBS pour les solutions sucrées avant le calcul du degré. Une solution sucrée se dilate plus que l’eau pure, donc la formule habituelle, établie pour l’eau, corrige trop peu. Par exemple, 1,080 lu à 27 °C sur un densimètre étalonné à 20 °C donne 1,082.</p>
+<h3>Mesures au réfractomètre</h3>
+<p>Dès qu’il y a de l’alcool, un réfractomètre lit trop haut : une DF au réfractomètre mise telle quelle dans une formule donne un degré faux. Prenez la mesure finale au densimètre, ou utilisez la correction du réfractomètre dans l’appli (formule de Terrill, avec une alerte hors de la plage sur laquelle elle a été établie).</p>
+<h3>Quelle précision ?</h3>
+<p>Tout degré calculé est une estimation. Les levures transforment 16,5 à 17,2 g/L de sucre en 1 % d’alcool (AWRI) : lisez le résultat à ±2 % de sa valeur. Au-dessus de 1,130 environ, les trois formules s’écartent de plus de 1 % vol. et le calculateur le signale.</p>
+<nav class="next" aria-label="Question suivante"><p class="next-h">Question suivante</p><ul><li><a href="../../fr/combien-de-sucre/">Combien de sucre ou de miel<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">Dans l’appli</h2>
+<p>Dans Demijohn, la DI, chaque mesure et chaque ajout de sucre ou de miel sont déjà dans la cuvée. Le degré et l’atténuation suivent chaque mesure, et les ajouts de miel en plusieurs fois sont comptés sans que vous ayez rien à faire.</p>
+<p class="small">Gratuit : cuvées et mesures illimitées, tous ces calculs. Pro se paie une fois, sans abonnement. Pas de compte, fonctionne hors ligne.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Bientôt</b></a><span class="store soon"><small>App Store</small><b>Plus tard</b></span></div>
+</aside>
+<h2>Sources</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.</p>
+<p class="updated">Vérifié d’après les sources : 25 octobre 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Cette page en :</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Les doses sont des estimations. Ajoutez par étapes, mesurez à nouveau, suivez la notice du produit. Pour un usage personnel uniquement.</p>
+<p>Demijohn est un journal de cuvée et un calculateur de fermentation pour le vin, l’hydromel et le cidre maison, fait par Mufatech. Ce site ne pose aucun cookie et ne charge rien depuis d’autres serveurs.</p>
+<nav aria-label="Site"><a href="../../fr/">Demijohn</a><a href="../../fr/calculateurs/">Calculs</a><a href="../../fr/support/">Assistance</a><a href="../../fr/privacy/">Confidentialité</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

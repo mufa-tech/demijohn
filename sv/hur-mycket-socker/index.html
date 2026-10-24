@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Hur mycket socker? Kalkylator för vin på egen frukt</title>
+<meta name="description" content="Hur mycket socker eller honung du ska tillsätta i vin, mjöd eller cider för en önskad densitet eller alkoholhalt, med exakt massbalans och ny volym.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/sv/hur-mycket-socker/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/wieviel-zucker/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/combien-de-sucre/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/quanto-zucchero/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/cuanto-azucar/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/ile-cukru/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/hur-mycket-socker/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/sugar/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Hur mycket socker? Kalkylator för vin på egen frukt">
+<meta property="og:description" content="Hur mycket socker eller honung du ska tillsätta i vin, mjöd eller cider för en önskad densitet eller alkoholhalt, med exakt massbalans och ny volym.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/sv/hur-mycket-socker/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-sv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Hoppa till innehållet</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../sv/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Huvudmeny"><a href="../../sv/kalkylatorer/" aria-current="page">Räknare</a><a href="../../sv/mjod-recept/">Mjödrecept</a><a href="../../sv/support/">Support</a></nav>
+<details class="langpick"><summary aria-label="Språk: Svenska"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>SV</span></summary><nav aria-label="Språk"><a href="../../sugar/" hreflang="en" lang="en">English</a><a href="../../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/combien-de-sucre/" hreflang="fr" lang="fr">Français</a><a href="../../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/hur-mycket-socker/" hreflang="sv" lang="sv" aria-current="true">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../sv/">Demijohn</a> / <a href="../../sv/kalkylatorer/">Räknare</a></p>
+<h1>Hur mycket socker behöver vinet</h1>
+<p class="lead">Fyll i volymen och densiteten du har nu, sedan alkoholhalten eller densiteten du vill nå. Resultatet är socker eller honung att tillsätta och volymen du får.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="sugar" novalidate>
+<fieldset class="choice"><legend>Vad är det för sats?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Druvvin</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Fruktvin</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Cider eller päroncider</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mjöd</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Sockervin</span></label></div></fieldset>
+<div class="field "><label for="vol">Satsens volym</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volymenhet"><option value="L" selected>liter</option><option value="usgal">amerikanska gallon</option><option value="impgal">brittiska gallon</option></select></div>
+<span class="hint" id="vol-hint">Det som finns i jäskärlet nu.</span><span class="err" id="vol-err" hidden></span></div>
+<div class="field "><label for="now">Densitet nu</label>
+<div class="joined"><input id="now" name="now" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,050" required aria-describedby="now-hint now-err"><select id="now-scale" name="now-scale" aria-label="Densitetsskala"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="now-hint">Saft, must eller vatten. Vatten är 1,000.</span><span class="err" id="now-err" hidden></span></div>
+<fieldset class="choice"><legend>Ditt mål</legend><div class="pills"><label class="pill"><input type="radio" name="target-kind" value="pa" checked><span>Möjlig alkoholhalt</span></label><label class="pill"><input type="radio" name="target-kind" value="sg"><span>Densitet</span></label></div></fieldset>
+<div data-show="pa"><div class="field "><label for="target-pa">Önskad möjlig alkoholhalt (% vol)</label>
+<input id="target-pa" name="target-pa" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="12" required aria-describedby="target-pa-hint target-pa-err">
+<span class="hint" id="target-pa-hint">Om allt socker jäser ut.</span><span class="err" id="target-pa-err" hidden></span></div></div>
+<div data-show="sg" hidden><div class="field "><label for="target-sg">Önskad densitet</label>
+<input id="target-sg" name="target-sg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" aria-describedby="target-sg-hint target-sg-err">
+<span class="hint" id="target-sg-hint">Samma skala som mätningen ovan.</span><span class="err" id="target-sg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Tillsätt</legend><div class="pills"><label class="pill"><input type="radio" name="sweet" value="sugar" checked><span>Socker</span></label><label class="pill"><input type="radio" name="sweet" value="honey"><span>Honung</span></label></div></fieldset>
+<details class="more"><summary>Vet du honungens vattenhalt?</summary><div class="field "><label for="moist">Honungens vattenhalt (%)</label>
+<input id="moist" name="moist" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="17,2" aria-describedby="moist-hint moist-err">
+<span class="hint" id="moist-hint">Vanlig honung har 17,2 % vatten. En honungsrefraktometer visar det direkt.</span><span class="err" id="moist-err" hidden></span></div></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Resultat</h2>
+<div id="calc-nojs" class="callout"><p>Den här räknaren behöver JavaScript. Metoden nedan visar hur du räknar för hand.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Körs i din webbläsare. Inget du skriver skickas eller sparas.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"sv-SE","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Druvvin","fruit":"Fruktvin","cider":"Cider eller päroncider","mead":"Mjöd","sugar":"Sockervin"},"sweet":{"sugar":"Socker","honey":"Honung"},"unitNames":{"L":"liter","usgal":"amerikanska gallon","impgal":"brittiska gallon"},"disclaimer":"Doserna är uppskattningar. Tillsätt i steg, mät igen och följ tillverkarens anvisning. Endast för eget bruk.","volPct":"% vol","litreSym":"l","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Varning","stop":"Stopp","info":"Obs","good":"OK"},"howTitle":"Så räknades det","sourceLabel":"Källa","fillIn":"Fyll i fälten för att se resultatet.","fixErrors":"Rätta de markerade fälten ovan för att se resultatet.","errNumber":"Skriv ett tal, till exempel {example}.","errRange":"Använd ett värde från {min} till {max}.","errGravity":"På skalan {scale} räknar den här räknaren från {min} till {max}.","issues":{"outOfRange":"Det här ligger utanför det område där formeln gäller.","invalidInput":"Ett av värdena går inte att använda här.","fgAboveOg":"Slutmätningen är högre än startdensiteten. Kontrollera båda mätningarna och skalan.","extrapolated":"Under 1,000 är Brix-kurvan extrapolerad. Lita på SG-värdet.","formulasDisagree":"Vid den här startdensiteten skiljer formlerna mer än 1 % vol. Läs resultatet som ett intervall.","honeyMoistureUnusual":"Den vattenhalten ligger utanför de 13,4 till 22,9 % som undersökningar av honung visar. Kontrollera mätningen.","alreadyAboveTarget":"Musten ligger redan på eller över målet. Inget behöver tillsättas.","targetBelowCurrent":"Målet ligger under nuvarande densitet.","tempOut":"Temperaturen vid {what} ligger utanför 0 till 40 °C (32 till 104 °F). Låt provet bli 15 till 25 °C och mät igen.","paOut":"Så hög möjlig alkoholhalt rymmer ingen must. Välj ett lägre mål."},"lowConfidence":"Provet vid {what} ligger utanför 10 till 35 °C, så en enklare korrigering för rent vatten används. Låt provet bli 15 till 25 °C för en säkrare mätning.","potential":"Möjlig alkoholhalt","highPa":"Över ungefär 15 % stannar de flesta jäster innan sockret är slut, så resultatet blir sött.","stepFeed":"Till mjöd tillsätter många en del av honungen från start och resten i omgångar. Logga varje tillsats: alkoholräknaren tar med den.","honeyAmount":"Honung","waterAmount":"Vatten","howTargetSugar":"{pa} % möjlig alkohol × 16,83 g/l = {sugar} g/l jäsbart socker, som nås vid {target} i en must av socker eller honung.","howTargetOiv":"{pa} % möjlig alkohol × 16,83 g/l = {sugar} g/l socker, som OIV tabell II placerar vid {target} för druv- eller fruktmust.","srcSugar":"NBS C440 Brix-kurva (massbalans), National Honey Board om honungens sammansättning, OIV 16,83 g/l per % vol","srcOiv":"OIV-MA-AS2-02 tabell II, OIV 16,83 g/l per % vol","howChaptalize":"Must vid {now} är {brix} °Bx enligt OIV tabell II, {sugar} g/l socker. Mål {pa} % × 16,83 = {target} g/l. OIV:s formel för chaptalisering med 1,0526 g invertsocker per g socker och 0,617 ml per g löst socker.","howRaise":"{from} = {b0} °Bx, {to} = {b1} °Bx. Mustens vikt {must} g. Gram = {must} × ({b1} − {b0}) / (100 × {f} − {b1}).","addH":"Tillsätt","addSugar":"socker (sackaros), löst i lite av musten.","addHoney":"honung, blandad med lite varmt vatten eller must.","newGravity":"Densitet efter tillsatsen","newVolume":"Volym efter tillsatsen","dilute":"För att komma ner till {to}, tillsätt i stället ungefär {water} vatten."}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Så räknas det</h2>
+<h3>En exakt massbalans</h3>
+<p>Brix är viktprocent löst socker, så mängden följer av en balans och inte av en tumregel. Musten väger V × SG × 998,203 g. För att gå från Brix B0 till B1 med ett sötningsmedel som till andelen f är socker: gram = mustens vikt × (B1 − B0) / (100 × f − B1). Socker har f = 1; honung har f = 0,828, eftersom vanlig honung är 17,2 % vatten.</p>
+<p>De vanliga tumreglerna om ”en fast mängd per liter från 1,000 till 1,090” glömmer att sockret också tar plats. För 1 liter vatten till 1,090 ger balansen 275 g socker och 1,17 liter must.</p>
+<h3>Från möjlig alkoholhalt till densitet</h3>
+<p>Möjlig alkoholhalt är jäsbart socker ÷ 16,83 g/l, OIV:s och EU:s konvention. För druv- och fruktmust kommer densiteten som rymmer så mycket socker från OIV tabell II, eftersom saft också innehåller annan torrsubstans. För mjöd och sockervin kommer den från sockret självt: honungens torrsubstans är ungefär 94 % jäsbart socker.</p>
+<p>För druvmust som redan finns i OIV-tabellen (från 1,041) räknas sockret med OIV:s formel för chaptalisering, som också tar med volymen sockret tillför.</p>
+<h3>Redan över målet</h3>
+<p>Ligger musten redan över målet visar räknaren i stället hur mycket vatten som tar ner den. Vatten späder ut allt annat också: syra, färg och smak.</p>
+<h3>Honung i omgångar</h3>
+<p>Ett starkt mjöd kommer lättare igång under ungefär 1,110. Många tillsätter en del av honungen senare, i två eller tre omgångar. <a href="../../sv/rakna-ut-alkoholhalt/">Räknaren för alkoholhalt</a> tar med de tillsatserna, och <a href="../../sv/mjod-recept/">mjödreceptet</a> går igenom det steg för steg.</p>
+<nav class="next" aria-label="Nästa fråga"><p class="next-h">Nästa fråga</p><ul><li><a href="../../sv/rakna-ut-alkoholhalt/">Alkoholhalt från OG och FG<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../sv/mjod-recept/">Mjödrecept för 5 liter<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">I appen</h2>
+<p>I Demijohn öppnas den här räknaren från satsen med volym och senaste densitet ifyllda, och ”Lägg till i loggen” skriver in mängden som en tillsats. Alkoholhalten räknar den sedan som en del av den effektiva OG.</p>
+<p class="small">Gratis: obegränsat antal satser och mätningar, alla de här räknarna. Pro är en engångsbetalning, ingen prenumeration. Inget konto, fungerar offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn&amp;listing=kit-wine"><small>Google Play</small><b>Kommer snart</b></a><span class="store soon"><small>App Store</small><b>Kommer senare</b></span></div>
+</aside>
+<h2>Källor</h2>
+<ol class="sources"><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2469/oiv-ma-as2-02.pdf" rel="noopener">OIV-MA-AS2-02, Table II: Brix, must density, sugar and potential alcohol</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://www.bjcp.org/mead/honeydefs.pdf" rel="noopener">National Honey Board, honey composition (White et al., USDA, 1962)</a></li><li><a href="https://homebrewersassociation.org/zymurgy/sweet-life-making-mead-easy-way/" rel="noopener">Piatz, S., “The Sweet Life”, Zymurgy, July/August 2011 (honey points per pound)</a></li></ol>
+<p class="callout">Doserna är uppskattningar. Tillsätt i steg, mät igen och följ tillverkarens anvisning. Endast för eget bruk.</p>
+<p class="updated">Kontrollerad mot källorna: 25 oktober 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Den här sidan på:</span> <a href="../../sugar/" hreflang="en" lang="en">English</a><a href="../../de/wieviel-zucker/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/combien-de-sucre/" hreflang="fr" lang="fr">Français</a><a href="../../it/quanto-zucchero/" hreflang="it" lang="it">Italiano</a><a href="../../es/cuanto-azucar/" hreflang="es" lang="es">Español</a><a href="../../pl/ile-cukru/" hreflang="pl" lang="pl">Polski</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Doserna är uppskattningar. Tillsätt i steg, mät igen och följ tillverkarens anvisning. Endast för eget bruk.</p>
+<p>Demijohn är en satslogg och jäsningsräknare för hemgjort vin, mjöd och cider, gjord av Mufatech. Den här sidan sätter inga cookies och laddar inget från andra servrar.</p>
+<nav aria-label="Webbplats"><a href="../../sv/">Demijohn</a><a href="../../sv/kalkylatorer/">Räknare</a><a href="../../sv/support/">Support</a><a href="../../sv/privacy/">Integritet</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

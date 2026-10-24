@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Alkoholgehalt berechnen: Wein, Met, Apfelwein</title>
+<meta name="description" content="Alkoholgehalt aus Start- und Enddichte, in Öchsle oder SG, mit der passenden Formel für Wein, Met oder Apfelwein, Temperaturkorrektur und Zucker unterwegs.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Alkoholgehalt berechnen: Wein, Met, Apfelwein">
+<meta property="og:description" content="Alkoholgehalt aus Start- und Enddichte, in Öchsle oder SG, mit der passenden Formel für Wein, Met oder Apfelwein, Temperaturkorrektur und Zucker unterwegs.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-de.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../de/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Hauptmenü"><a href="../../de/rechner/" aria-current="page">Rechner</a><a href="../../de/met-selber-machen/">Met-Anleitung</a><a href="../../de/support/">Hilfe</a></nav>
+<details class="langpick"><summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>DE</span></summary><nav aria-label="Sprache"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../de/">Demijohn</a> / <a href="../../de/rechner/">Rechner</a></p>
+<h1>Alkoholgehalt von Wein, Met und Apfelwein berechnen</h1>
+<p class="lead">Gib die Startdichte und deine letzte Messung ein, in Öchsle, SG oder einer anderen Skala. Demijohn nimmt für Trauben-, Obst- und Apfelwein die Standardformel, für Met und Zuckeransätze die alternative Formel, und zeigt die anderen daneben.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Was setzt du an?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape" checked><span>Traubenwein</span></label><label class="pill"><input type="radio" name="must" value="fruit"><span>Obstwein</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Apfelwein oder Perry</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Met</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Zuckeransatz</span></label></div></fieldset>
+<div class="field "><label for="og">Startdichte (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="90" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Dichteskala"><option value="oechsle" selected>°Öchsle</option><option value="sg">SG</option><option value="kmw">KMW (°Babo)</option><option value="brix">°Brix</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="og-hint">Gemessen, bevor die Hefe dazukam.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">End- oder aktuelle Dichte</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="-4" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Deine letzte Messung.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Wärmer oder kälter gemessen als die Bezugstemperatur der Spindel?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Temperatur bei der Startdichte</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Temperatureinheit"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Temperatur bei dieser Messung</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Bezugstemperatur der Spindel</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">Leer lassen, wenn die Probe Bezugstemperatur hatte.</p></details>
+<details class="more"><summary>Nach der ersten Messung Zucker oder Honig zugegeben?</summary>
+<div class="field-row two"><div class="field "><label for="add">Zugegebene Menge insgesamt</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Gewichtseinheit"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Volumen bei der Startdichte</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volumeneinheit"><option value="L" selected>Liter</option><option value="usgal">US-Gallonen</option><option value="impgal">britische Gallonen</option></select></div>
+<span class="hint" id="vol-hint">Vor der Zugabe.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Was du zugegeben hast</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Zucker</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Honig</span></label></div></fieldset>
+<p class="small">Später zugegebener Zucker oder Honig steckt nie in der Startdichte. Aus Start- und Enddichte allein kommt dann zu wenig Alkohol heraus.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Ergebnis</h2>
+<div id="calc-nojs" class="callout"><p>Dieser Rechner braucht JavaScript. Unten steht, wie du es von Hand rechnest.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Läuft in deinem Browser. Was du eingibst, wird weder gesendet noch gespeichert.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"de-DE","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Öchsle","kmw":"KMW (°Babo)","baume":"°Baumé"},"defaultScale":"oechsle","musts":{"grape":"Traubenwein","fruit":"Obstwein","cider":"Apfelwein oder Perry","mead":"Met","sugar":"Zuckeransatz"},"sweet":{"sugar":"Zucker","honey":"Honig"},"unitNames":{"L":"Liter","usgal":"US-Gallonen","impgal":"britische Gallonen"},"disclaimer":"Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warnung","stop":"Stopp","info":"Hinweis","good":"OK"},"howTitle":"So wurde gerechnet","sourceLabel":"Quelle","fillIn":"Füll die Felder aus, dann erscheint das Ergebnis.","fixErrors":"Korrigiere die markierten Felder oben, dann erscheint das Ergebnis.","errNumber":"Gib eine Zahl ein, zum Beispiel {example}.","errRange":"Nimm einen Wert von {min} bis {max}.","errGravity":"Auf der Skala {scale} rechnet dieser Rechner von {min} bis {max}.","issues":{"outOfRange":"Das liegt außerhalb des Bereichs, für den die Formel gilt.","invalidInput":"Einer der Werte lässt sich hier nicht verwenden.","fgAboveOg":"Die letzte Messung liegt über der Startdichte. Prüf beide Werte und die Skala.","extrapolated":"Unter 1,000 ist die Brix-Kurve nur verlängert. Verlass dich auf den SG-Wert.","formulasDisagree":"Bei dieser Startdichte liegen die Formeln mehr als 1 % vol auseinander. Lies das Ergebnis als Spanne.","honeyMoistureUnusual":"Dieser Wassergehalt liegt außerhalb der 13,4 bis 22,9 %, die in Honiguntersuchungen gemessen wurden. Prüf die Messung.","alreadyAboveTarget":"Der Most liegt schon auf oder über diesem Ziel. Es muss nichts dazu.","targetBelowCurrent":"Das Ziel liegt unter der jetzigen Dichte.","tempOut":"{what}: Die Temperatur liegt außerhalb von 0 bis 40 °C (32 bis 104 °F). Bring die Probe auf 15 bis 25 °C und miss noch einmal.","paOut":"So viel potenziellen Alkohol kann ein Most nicht haben. Nimm ein niedrigeres Ziel."},"lowConfidence":"{what}: Die Probe liegt außerhalb von 10 bis 35 °C, deshalb wird eine einfachere Korrektur nur nach Wasser verwendet. Bring die Probe auf 15 bis 25 °C, dann wird der Wert genauer.","potential":"Potenzieller Alkohol","highPa":"Über etwa 15 % hören die meisten Hefen auf, bevor der Zucker weg ist. Das Ergebnis bleibt dann süß.","stepFeed":"Beim Met geben viele einen Teil des Honigs am Anfang zu und den Rest in Etappen. Trag jede Zugabe ein: Der Alkoholrechner zählt sie mit.","honeyAmount":"Honig","waterAmount":"Wasser","howTargetSugar":"{pa} % vol potenzieller Alkohol × 16,83 g/L = {sugar} g/L vergärbarer Zucker, erreicht bei {target} in einem Zucker- oder Honigmost.","howTargetOiv":"{pa} % vol potenzieller Alkohol × 16,83 g/L = {sugar} g/L Zucker, laut OIV-Tabelle II bei {target} für Trauben- oder Obstmost.","srcSugar":"NBS C440 Brix-Kurve (Massenbilanz), National Honey Board Honigzusammensetzung, OIV 16,83 g/L je % vol","srcOiv":"OIV-MA-AS2-02 Tabelle II, OIV 16,83 g/L je % vol","ogShort":"OG","fgShort":"FG","howTemp":"{what} {from} temperaturkorrigiert: {to}.","needVolume":"Gib das Volumen ein, damit der zugegebene Zucker oder Honig mitzählt.","howEffective":"OG {og} plus {added} zugegeben ({solids} g gelöste Trockenmasse) = effektive OG {eff}.","abvH":"Alkohol","abvWhat":"{formula}, voreingestellt für: {must}.","formulas":{"standard":"Standardformel","alternate":"Alternative Formel","balling":"Balling-Formel"},"attenuation":"Scheinbarer Vergärungsgrad","refractometer":"Kommt diese Endmessung vom Refraktometer, zeigt es mit Alkohol zu hoch an. Nimm die Spindel.","howStandard":"({og} − {fg}) × 131,25 = {abv} % vol.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} % vol.","srcStandard":"Standardformel (OG − FG) × 131,25; Ausbeute-Spanne AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (alternative Formel); Ausbeute-Spanne AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">So wird gerechnet</h2>
+<h3>Zwei Formeln, und wann welche</h3>
+<p>Die <strong>Standardformel</strong> lautet Alkohol = (OG − FG) × 131,25. Die <strong>alternative Formel</strong> (Hall, 1995) lautet Alkohol = 76,08 × (OG − FG) / (1,775 − OG) × FG / 0,794. Bei niedriger Dichte kommen beide aufs Gleiche, ab etwa 1,070 (70 °Oe) laufen sie auseinander.</p>
+<p>Ich habe beide mit dem Zucker verglichen, der wirklich im Most ist. Für Trauben-, Obst- und Apfelmost liegt die Standardformel näher dran (mittlerer Fehler 0,24 % gegenüber dem potenziellen Alkohol nach OIV zwischen 1,080 und 1,110), weil Saft 8 bis 12 % Stoffe enthält, die kein Zucker sind. Für Met und Zuckeransätze liegt die alternative Formel näher: Von 1,100 auf 0,996 ergibt sie 14,7 %, die Standardformel nur 13,7 %. Daher kommt das bekannte „Mein Met ist stärker, als der Rechner sagt“.</p>
+<h3>Zucker oder Honig, später zugegeben</h3>
+<p>Jedes Gramm, das nach der ersten Messung dazukommt, hebt die Dichte, von der die Hefe in Wahrheit gestartet ist. Demijohn rechnet eine effektive Startdichte über die Massenbilanz aus: der Ansatz als Mostmasse mit gelöster Trockenmasse nach der NBS-Brix-Kurve, dazu die Trockenmasse jeder Zugabe (Zucker 100 %, Honig 82,8 %). Der Alkohol wird dann aus dieser effektiven Startdichte berechnet.</p>
+<h3>Temperatur</h3>
+<p>Eine Spindel zeigt nur bei ihrer Bezugstemperatur richtig an. Die Messwerte werden mit der NBS-Tabelle 110 für Zuckerlösungen korrigiert, bevor der Alkohol gerechnet wird. Der <a href="../../de/spindel-temperaturkorrektur/">Temperaturrechner</a> erklärt die Korrektur.</p>
+<h3>Messwerte vom Refraktometer</h3>
+<p>Sobald Alkohol da ist, zeigt ein Refraktometer zu hoch an. Eine Enddichte vom Refraktometer direkt in eine Alkoholformel zu geben, geht deshalb schief. Nimm für die letzte Messung die Spindel oder die Refraktometer-Korrektur in der App (Formel nach Terrill, mit Warnung außerhalb des Bereichs, für den sie ermittelt wurde).</p>
+<h3>Wie genau ist die Zahl?</h3>
+<p>Jeder Alkoholwert ist eine Schätzung. Hefen machen aus 16,5 bis 17,2 g/L Zucker 1 % vol Alkohol (AWRI). Lies das Ergebnis also als ±2 % seiner selbst. Über etwa 1,130 liegen die drei Formeln mehr als 1 % vol auseinander, und der Rechner sagt dir das.</p>
+<nav class="next" aria-label="Nächste Frage"><p class="next-h">Nächste Frage</p><ul><li><a href="../../de/spindel-temperaturkorrektur/">Temperatur der Spindel<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../de/oechsle-tabelle/">Öchsle-Tabelle und Skalen<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../de/wieviel-zucker/">Wieviel Zucker oder Honig<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In der App</h2>
+<p>In Demijohn stehen Startdichte, jede Messung und jede Zucker- oder Honiggabe schon im Ansatz. Alkohol und Vergärungsgrad rechnen sich bei jeder Messung neu, und Honig in Etappen wird mitgezählt, ohne dass du etwas tun musst.</p>
+<p class="small">Kostenlos: unbegrenzt Ansätze und Messungen, alle diese Rechner. Pro zahlst du einmal, kein Abo. Kein Konto, läuft offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn&amp;listing=de-forum"><small>Google Play</small><b>Bald verfügbar</b></a><span class="store soon"><small>App Store</small><b>Kommt später</b></span></div>
+</aside>
+<h2>Quellen</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+<p class="updated">Mit den Quellen abgeglichen: 25. Oktober 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Diese Seite auf:</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+<p>Demijohn ist Gärprotokoll und Rechner für Wein, Met und Apfelwein zu Hause, von Mufatech. Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.</p>
+<nav aria-label="Seite"><a href="../../de/">Demijohn</a><a href="../../de/rechner/">Rechner</a><a href="../../de/support/">Hilfe</a><a href="../../de/privacy/">Datenschutz</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

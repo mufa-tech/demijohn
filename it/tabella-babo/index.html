@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Tabella Babo: gradi Babo, densità, Brix e alcol</title>
+<meta name="description" content="Converti gradi Babo, densità, Brix, Oechsle, Plato e Baumé, con l’alcol potenziale per uva e miele. Come si legge il mostimetro, tabella stampabile.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/it/tabella-babo/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/oechsle/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/oechsle-tabelle/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/tabella-babo/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/tabela-blg/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/oechsle/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Tabella Babo: gradi Babo, densità, Brix e alcol">
+<meta property="og:description" content="Converti gradi Babo, densità, Brix, Oechsle, Plato e Baumé, con l’alcol potenziale per uva e miele. Come si legge il mostimetro, tabella stampabile.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/it/tabella-babo/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-it.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../it/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Principale"><a href="../../it/calcolatori/" aria-current="page">Calcolatori</a><a href="../../it/idromele-come-si-fa/">Guida all’idromele</a><a href="../../it/support/">Assistenza</a></nav>
+<details class="langpick"><summary aria-label="Lingua: Italiano"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>IT</span></summary><nav aria-label="Lingua"><a href="../../oechsle/" hreflang="en" lang="en">English</a><a href="../../de/oechsle-tabelle/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/" hreflang="fr" lang="fr">Français</a><a href="../../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/tabella-babo/" hreflang="it" lang="it" aria-current="true">Italiano</a><a href="../../es/" hreflang="es" lang="es">Español</a><a href="../../pl/tabela-blg/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../it/">Demijohn</a> / <a href="../../it/calcolatori/">Calcolatori</a></p>
+<h1>Tabella Babo e convertitore per il mostimetro</h1>
+<p class="lead">Scrivi una lettura in qualsiasi scala e la vedi nelle altre, con l’alcol potenziale. La tabella qui sotto funziona anche senza JavaScript e si stampa su una pagina.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="scales" novalidate>
+<div class="field "><label for="value">Lettura</label>
+<div class="joined"><input id="value" name="value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="17,3" required aria-describedby="value-hint value-err"><select id="value-scale" name="value-scale" aria-label="Scala"><option value="kmw" selected>Gradi Babo</option><option value="sg">Densità (SG)</option><option value="brix">°Brix</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="value-hint">Nella scala scelta qui accanto.</span><span class="err" id="value-err" hidden></span></div>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Risultato</h2>
+<div id="calc-nojs" class="callout"><p>Questo calcolatore ha bisogno di JavaScript. Il metodo qui sotto spiega come fare il conto a mano.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Funziona nel tuo browser. Quello che scrivi non viene inviato né salvato.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"it-IT","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"Densità (SG)","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"Gradi Babo","baume":"°Baumé"},"defaultScale":"kmw","musts":{"grape":"Vino d’uva","fruit":"Vino di frutta","cider":"Sidro o perry","mead":"Idromele","sugar":"Zucchero e acqua"},"sweet":{"sugar":"Zucchero","honey":"Miele"},"unitNames":{"L":"litri","usgal":"galloni USA","impgal":"galloni imperiali"},"disclaimer":"Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°Babo","baume":"°Bé"},"flags":{"warn":"Attenzione","stop":"Stop","info":"Nota","good":"OK"},"howTitle":"Come è stato calcolato","sourceLabel":"Fonte","fillIn":"Compila i campi per vedere il risultato.","fixErrors":"Correggi i campi segnati qui sopra per vedere il risultato.","errNumber":"Scrivi un numero, per esempio {example}.","errRange":"Usa un valore da {min} a {max}.","errGravity":"Sulla scala {scale} questo calcolatore va da {min} a {max}.","issues":{"outOfRange":"Il valore è fuori dall’intervallo in cui la formula vale.","invalidInput":"Uno dei valori qui non si può usare.","fgAboveOg":"La lettura finale è più alta della densità iniziale. Controlla tutte e due le letture e la scala.","extrapolated":"Sotto 1,000 la curva del Brix è estrapolata. Fidati del valore in SG.","formulasDisagree":"A questa densità iniziale le formule si discostano di più dell’1 % vol. Leggi il risultato come un intervallo.","honeyMoistureUnusual":"Questa umidità è fuori dall’intervallo da 13,4 a 22,9 % trovato nelle analisi sul miele. Controlla la lettura.","alreadyAboveTarget":"Il mosto è già all’obiettivo o sopra. Non c’è niente da aggiungere.","targetBelowCurrent":"L’obiettivo è sotto la densità attuale.","tempOut":"La temperatura della lettura {what} è fuori da 0 a 40 °C (da 32 a 104 °F). Porta il campione tra 15 e 25 °C e rileggi.","paOut":"Un mosto non può contenere zucchero per questo alcol potenziale. Scegli un obiettivo più basso."},"lowConfidence":"La lettura {what} è fuori da 10 a 35 °C, quindi si usa una correzione più semplice, basata solo sull’acqua. Porta il campione tra 15 e 25 °C per una lettura migliore.","potential":"Alcol potenziale","highPa":"Sopra il 15 % circa la maggior parte dei lieviti si ferma prima che lo zucchero finisca, e il risultato resta dolce.","stepFeed":"Per l’idromele molti mettono parte del miele all’inizio e il resto a più riprese. Segna ogni aggiunta: il calcolo della gradazione ne tiene conto.","honeyAmount":"Miele","waterAmount":"Acqua","howTargetSugar":"{pa} % di alcol potenziale × 16,83 g/L = {sugar} g/L di zucchero fermentabile, che in un mosto di zucchero o di miele si raggiunge a {target}.","howTargetOiv":"{pa} % di alcol potenziale × 16,83 g/L = {sugar} g/L di zucchero, che la Tabella II OIV mette a {target} per un mosto d’uva o di frutta.","srcSugar":"Curva del Brix NBS C440 (bilancio di massa), composizione del miele del National Honey Board, OIV 16,83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 Tabella II, OIV 16,83 g/L per % vol","converterScales":["kmw","sg","brix","oechsle","plato","baume"],"convertedH":"In tutte le scale","potentialH":"Alcol potenziale","paGrape":"Mosto d’uva o di frutta","paGrapeNone":"sotto la tabella OIV","paSugar":"Mosto di zucchero","paHoney":"Mosto di miele","howScales":"SG {sg} = {bx} °Bx (approssimazione NBS) = {oe} °Oe = {be} °Bé.","srcScales":"Approssimazione del Brix NBS C440, approssimazione del Plato di Buhl, relazione di Babo, OIV-MA-AS2-02 Tabella II"}</script>
+<section class="prose gap-top" aria-labelledby="table-h"><h2 id="table-h">Tabella di conversione</h2>
+<p>Densità (SG 20/20) da 1,000 a 1,130. Alcol potenziale: mosto d’uva o di frutta dalla Tabella II OIV, mosto di miele dal contenuto di zucchero del miele, entrambi a 16,83 g/L per % vol.</p>
+<div class="table-wrap" role="region" aria-labelledby="table-h" tabindex="0"><table class="num-table">
+<thead><tr><th scope="col">Densità (SG)</th><th scope="col">Gradi Babo</th><th scope="col">°Brix</th><th scope="col">°Baumé</th><th scope="col">Alcol pot. % (uva)</th><th scope="col">Alcol pot. % (miele)</th></tr></thead>
+<tbody><tr><td>1,000</td><td>0</td><td>0</td><td>0</td><td>–</td><td>0,0</td></tr>
+<tr><td>1,005</td><td>1,1</td><td>1,3</td><td>0,7</td><td>–</td><td>0,7</td></tr>
+<tr><td>1,010</td><td>2,2</td><td>2,6</td><td>1,4</td><td>–</td><td>1,4</td></tr>
+<tr><td>1,015</td><td>3,3</td><td>3,8</td><td>2,1</td><td>–</td><td>2,2</td></tr>
+<tr><td>1,020</td><td>4,3</td><td>5,1</td><td>2,8</td><td>–</td><td>2,9</td></tr>
+<tr><td>1,025</td><td>5,4</td><td>6,3</td><td>3,5</td><td>–</td><td>3,6</td></tr>
+<tr><td>1,030</td><td>6,4</td><td>7,6</td><td>4,2</td><td>–</td><td>4,3</td></tr>
+<tr><td>1,035</td><td>7,4</td><td>8,8</td><td>4,9</td><td>–</td><td>5,1</td></tr>
+<tr><td>1,040</td><td>8,5</td><td>10</td><td>5,6</td><td>–</td><td>5,8</td></tr>
+<tr><td>1,045</td><td>9,5</td><td>11,2</td><td>6,2</td><td>5,5</td><td>6,5</td></tr>
+<tr><td>1,050</td><td>10,5</td><td>12,4</td><td>6,9</td><td>6,3</td><td>7,3</td></tr>
+<tr><td>1,055</td><td>11,5</td><td>13,6</td><td>7,6</td><td>7,1</td><td>8,0</td></tr>
+<tr><td>1,060</td><td>12,5</td><td>14,7</td><td>8,2</td><td>7,8</td><td>8,7</td></tr>
+<tr><td>1,065</td><td>13,4</td><td>15,9</td><td>8,8</td><td>8,6</td><td>9,5</td></tr>
+<tr><td>1,070</td><td>14,4</td><td>17,1</td><td>9,5</td><td>9,3</td><td>10,2</td></tr>
+<tr><td>1,075</td><td>15,4</td><td>18,2</td><td>10,1</td><td>10,1</td><td>10,9</td></tr>
+<tr><td>1,080</td><td>16,3</td><td>19,3</td><td>10,7</td><td>10,8</td><td>11,7</td></tr>
+<tr><td>1,085</td><td>17,3</td><td>20,5</td><td>11,4</td><td>11,6</td><td>12,4</td></tr>
+<tr><td>1,090</td><td>18,2</td><td>21,6</td><td>12</td><td>12,3</td><td>13,1</td></tr>
+<tr><td>1,095</td><td>19,1</td><td>22,7</td><td>12,6</td><td>13,1</td><td>13,9</td></tr>
+<tr><td>1,100</td><td>20,1</td><td>23,8</td><td>13,2</td><td>13,8</td><td>14,6</td></tr>
+<tr><td>1,105</td><td>21</td><td>24,9</td><td>13,8</td><td>14,6</td><td>15,4</td></tr>
+<tr><td>1,110</td><td>21,9</td><td>25,9</td><td>14,4</td><td>15,3</td><td>16,1</td></tr>
+<tr><td>1,115</td><td>22,8</td><td>27</td><td>15</td><td>16,0</td><td>16,8</td></tr>
+<tr><td>1,120</td><td>23,7</td><td>28,1</td><td>15,5</td><td>16,8</td><td>17,6</td></tr>
+<tr><td>1,125</td><td>24,6</td><td>29,1</td><td>16,1</td><td>17,5</td><td>18,3</td></tr>
+<tr><td>1,130</td><td>25,5</td><td>30,2</td><td>16,7</td><td>18,2</td><td>19,1</td></tr></tbody></table></div></section>
+<div class="prose gap-top">
+<h2 id="method">Come si calcola</h2>
+<h3>Come si legge un mostimetro Babo</h3>
+<p>Il mostimetro Babo è un densimetro di vetro con la scala in gradi Babo. Filtra un po’ di mosto in un cilindro, togli bucce e schiuma, poi immergi il mostimetro e fallo girare tra le dita perché si stacchino le bollicine. Quando si ferma senza toccare le pareti, leggi il valore dove il pelo del liquido incrocia la scala (la parte bassa del menisco), con l’occhio alla stessa altezza.</p>
+<p>Il mostimetro è giusto solo alla temperatura di taratura stampata sulla scala. Un mosto più caldo legge basso, uno più freddo legge alto. Porta il campione vicino a quella temperatura, oppure inserisci la temperatura nel <a href="../../it/calcolo-gradazione/">calcolo della gradazione</a>, che corregge la lettura.</p>
+<p>Durante la fermentazione la lettura scende, ma non dice più quanto zucchero resta: l’alcol è più leggero dell’acqua e abbassa la densità. Per la gradazione servono la lettura iniziale e quella finale.</p>
+<h3>Gradi Babo e densità</h3>
+<p>Il grado Babo (KMW, dalla scuola enologica di Klosterneuburg, in Austria) indica in modo approssimato i grammi di zucchero in 100 g di mosto d’uva. Si lega alla densità con °Oe = KMW × (4,54 + 0,022 × KMW), dove °Oechsle = 1000 × (SG − 1). Per esempio 20 °Babo danno 20 × (4,54 + 0,44) = 99,6 °Oe, cioè una densità di circa 1,100. Il convertitore qui sopra fa il conto anche al contrario.</p>
+<h3>SG e Brix</h3>
+<p>°Brix = ((182,46007 × SG − 775,68212) × SG + 1262,7794) × SG − 669,56218, un’approssimazione delle tabelle NBS dello zucchero precisa a 0,002 °Bx fino a SG 1,179. Il calcolo inverso si risolve in modo esatto. La scorciatoia “punti di densità ÷ 4” va bene a 1,040, ma dà 0,67 °Bx in più a 1,080 e 1,9 in più a 1,120.</p>
+<h3>Plato, Balling e Blg</h3>
+<p>Il Plato usa l’approssimazione di Buhl delle tabelle per la birra. Brix, Balling (Blg in Polonia) e Plato sono la stessa idea, lo zucchero come percentuale in massa, e tra 1,000 e 1,120 differiscono di meno di 0,02.</p>
+<h3>Oechsle e Baumé</h3>
+<p>°Oechsle = 1000 × (SG − 1), la scala usata in Germania e in Svizzera. Il Baumé è la scala per liquidi più pesanti dell’acqua con modulo 145: °Bé = 145 × (1 − 1/SG).</p>
+<h3>Alcol potenziale</h3>
+<p>Il mosto d’uva contiene solidi che non sono zucchero, quindi a parità di densità c’è meno zucchero che in un mosto di miele o di zucchero. La colonna dell’uva usa la Tabella II OIV (da 1,041; sotto quel valore la tabella non ha righe). La colonna del miele usa il contenuto di zucchero del miele.</p>
+<nav class="next" aria-label="La domanda successiva"><p class="next-h">La domanda successiva</p><ul><li><a href="../../it/quanto-zucchero/">Quanto zucchero o miele<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../it/calcolo-gradazione/">Gradazione alcolica<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">Nell’app</h2>
+<p>In Demijohn ogni lettura si può scrivere in una qualsiasi di queste scale e vedere in un’altra. La scala resta salvata per ogni lotto e un aggiornamento non la cambia.</p>
+<p class="small">Gratis: lotti e letture illimitati, tutti questi calcolatori. Pro si paga una volta, senza abbonamento. Niente account, funziona offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn"><small>Google Play</small><b>Prossimamente</b></a><span class="store soon"><small>App Store</small><b>Più avanti</b></span></div>
+</aside>
+<h2>Fonti</h2>
+<ol class="sources"><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://de.wikipedia.org/wiki/Grad_Oechsle" rel="noopener">Wikipedia (de), “Grad Oechsle”</a></li><li><a href="https://de.wikipedia.org/wiki/Klosterneuburger_Mostwaage" rel="noopener">Wikipedia (de), “Klosterneuburger Mostwaage” (Babo relation)</a></li><li><a href="https://www.oiv.int/public/medias/2469/oiv-ma-as2-02.pdf" rel="noopener">OIV-MA-AS2-02, Table II: Brix, must density, sugar and potential alcohol</a></li></ol>
+<p class="callout">Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.</p>
+<p class="updated">Verificato sulle fonti: 25 ottobre 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Questa pagina in:</span> <a href="../../oechsle/" hreflang="en" lang="en">English</a><a href="../../de/oechsle-tabelle/" hreflang="de" lang="de">Deutsch</a><a href="../../pl/tabela-blg/" hreflang="pl" lang="pl">Polski</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Le dosi sono stime. Aggiungi per gradi, misura di nuovo, segui le indicazioni del produttore. Solo per uso personale.</p>
+<p>Demijohn è un diario dei lotti e un calcolatore di fermentazione per vino fatto in casa, idromele e sidro, fatto da Mufatech. Questo sito non usa cookie e non carica nulla da altri server.</p>
+<nav aria-label="Sito"><a href="../../it/">Demijohn</a><a href="../../it/calcolatori/">Calcolatori</a><a href="../../it/support/">Assistenza</a><a href="../../it/privacy/">Privacy</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

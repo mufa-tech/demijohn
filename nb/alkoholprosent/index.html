@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Alkoholprosent i hjemmelaget vin: kalkulator</title>
+<meta name="description" content="Regn ut alkoholprosent i hjemmelaget vin, mjød og sider fra OG og FG, med riktig formel, temperaturkorrigering og sukker tilsatt underveis.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/alkoholgehalt-berechnen/">
+<link rel="alternate" hreflang="fr" href="https://mufa-tech.github.io/demijohn/fr/calcul-degre-alcool/">
+<link rel="alternate" hreflang="nl" href="https://mufa-tech.github.io/demijohn/nl/alcoholpercentage-berekenen/">
+<link rel="alternate" hreflang="it" href="https://mufa-tech.github.io/demijohn/it/calcolo-gradazione/">
+<link rel="alternate" hreflang="es" href="https://mufa-tech.github.io/demijohn/es/calcular-grado-alcohol/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/blg-na-alkohol/">
+<link rel="alternate" hreflang="sv" href="https://mufa-tech.github.io/demijohn/sv/rakna-ut-alkoholhalt/">
+<link rel="alternate" hreflang="nb" href="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<link rel="alternate" hreflang="fi" href="https://mufa-tech.github.io/demijohn/fi/alkoholiprosentti/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/abv/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Alkoholprosent i hjemmelaget vin: kalkulator">
+<meta property="og:description" content="Regn ut alkoholprosent i hjemmelaget vin, mjød og sider fra OG og FG, med riktig formel, temperaturkorrigering og sukker tilsatt underveis.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/nb/alkoholprosent/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-nb.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Hopp til innholdet</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../nb/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Hovedmeny"><a href="../../nb/alkoholprosent/" aria-current="page">Kalkulator</a><a href="../../nb/support/">Hjelp</a></nav>
+<details class="langpick"><summary aria-label="Språk: Norsk bokmål"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>NB</span></summary><nav aria-label="Språk"><a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/alkoholprosent/" hreflang="nb" lang="nb" aria-current="true">Norsk bokmål</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../nb/">Demijohn</a></p>
+<h1>Hvor sterk blir vinen? Regn ut alkoholprosent</h1>
+<p class="lead">Hvor mange prosent får den hjemmelagde vinen? Skriv inn OG og siste måling fra hydrometeret. Demijohn bruker standardformelen for druer, frukt og sider og den alternative formelen for mjød og sukkervin, og viser de andre ved siden av. Det gjelder like mye for vinsett som for egen frukt.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="abv" novalidate>
+<fieldset class="choice"><legend>Hva lager du?</legend><div class="pills"><label class="pill"><input type="radio" name="must" value="grape"><span>Druevin</span></label><label class="pill"><input type="radio" name="must" value="fruit" checked><span>Fruktvin</span></label><label class="pill"><input type="radio" name="must" value="cider"><span>Sider eller pæresider</span></label><label class="pill"><input type="radio" name="must" value="mead"><span>Mjød</span></label><label class="pill"><input type="radio" name="must" value="sugar"><span>Sukkervin</span></label></div></fieldset>
+<div class="field "><label for="og">Startvekt (OG)</label>
+<div class="joined"><input id="og" name="og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1,090" required aria-describedby="og-hint og-err"><select id="og-scale" name="og-scale" aria-label="Egenvektsskala"><option value="sg" selected>SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
+<span class="hint" id="og-hint">Målt før gjæren ble tilsatt.</span><span class="err" id="og-err" hidden></span></div>
+<div class="field "><label for="fg">Sluttvekt (FG) eller siste måling</label>
+<input id="fg" name="fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0,996" required aria-describedby="fg-hint fg-err">
+<span class="hint" id="fg-hint">Siste måling.</span><span class="err" id="fg-err" hidden></span></div>
+<details class="more"><summary>Målt varmere eller kaldere enn hydrometerets kalibrering?</summary>
+<div class="field-row two"><div class="field "><label for="t-og">Temperatur ved OG</label>
+<div class="joined"><input id="t-og" name="t-og" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-og-err"><select id="t-unit" name="t-unit" aria-label="Temperaturenhet"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="err" id="t-og-err" hidden></span></div><div class="field "><label for="t-fg">Temperatur ved denne målingen</label>
+<input id="t-fg" name="t-fg" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="t-fg-err">
+<span class="err" id="t-fg-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Hydrometeret er kalibrert ved</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+<p class="small">La feltet stå tomt hvis prøven holdt kalibreringstemperaturen.</p></details>
+<details class="more"><summary>Tilsatt sukker eller honning etter OG-målingen?</summary>
+<div class="field-row two"><div class="field "><label for="add">Mengde tilsatt i alt</label>
+<div class="joined"><input id="add" name="add" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="add-err"><select id="add-unit" name="add-unit" aria-label="Vektenhet"><option value="g">g</option><option value="kg" selected>kg</option><option value="oz">oz</option><option value="lb">lb</option></select></div>
+<span class="err" id="add-err" hidden></span></div>
+<div class="field "><label for="vol">Satsens volum ved OG</label>
+<div class="joined"><input id="vol" name="vol" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="23" required aria-describedby="vol-hint vol-err"><select id="vol-unit" name="vol-unit" aria-label="Volumenhet"><option value="L" selected>liter</option><option value="usgal">amerikanske gallon</option><option value="impgal">britiske gallon</option></select></div>
+<span class="hint" id="vol-hint">Før tilsetningen.</span><span class="err" id="vol-err" hidden></span></div></div>
+<fieldset class="choice"><legend>Hva du tilsatte</legend><div class="pills"><label class="pill"><input type="radio" name="add-kind" value="sugar" checked><span>Sukker</span></label><label class="pill"><input type="radio" name="add-kind" value="honey"><span>Honning</span></label></div></fieldset>
+<p class="small">Sukker eller honning som kommer senere, viser seg aldri i OG, så alkoholprosenten fra OG og FG alene blir for lav.</p></details>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Resultat</h2>
+<div id="calc-nojs" class="callout"><p>Denne kalkulatoren trenger JavaScript. Metoden under viser hvordan du regner det ut for hånd.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Kjører i nettleseren din. Ingenting du skriver inn, sendes eller lagres.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"nb-NO","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Oechsle","kmw":"°Babo (KMW)","baume":"°Baumé"},"defaultScale":"sg","musts":{"grape":"Druevin","fruit":"Fruktvin","cider":"Sider eller pæresider","mead":"Mjød","sugar":"Sukkervin"},"sweet":{"sugar":"Sukker","honey":"Honning"},"unitNames":{"L":"liter","usgal":"amerikanske gallon","impgal":"britiske gallon"},"disclaimer":"Dosene er anslag. Tilsett litt om gangen, mål på nytt og følg produsentens anvisning. Kun til eget bruk.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Advarsel","stop":"Stopp","info":"Merk","good":"OK"},"howTitle":"Slik ble det regnet ut","sourceLabel":"Kilde","fillIn":"Fyll inn feltene for å se resultatet.","fixErrors":"Rett feltene som er merket over, for å se resultatet.","errNumber":"Skriv inn et tall, for eksempel {example}.","errRange":"Bruk en verdi fra {min} til {max}.","errGravity":"Med {scale} regner denne kalkulatoren fra {min} til {max}.","issues":{"outOfRange":"Dette er utenfor området formelen gjelder for.","invalidInput":"En av verdiene kan ikke brukes her.","fgAboveOg":"Sluttmålingen er høyere enn OG. Sjekk begge målingene og skalaen.","extrapolated":"Under 1,000 er Brix-kurven ekstrapolert. Stol på SG-tallet.","formulasDisagree":"Ved denne OG-en skiller formlene seg med mer enn 1 % vol. Les resultatet som et intervall.","honeyMoistureUnusual":"Det vanninnholdet er utenfor 13,4 til 22,9 %, som er det undersøkelser av honning har funnet. Sjekk målingen.","alreadyAboveTarget":"Mosten er allerede på eller over målet. Ingenting å tilsette.","targetBelowCurrent":"Målet er lavere enn egenvekten nå.","tempOut":"Temperaturen for {what} er utenfor 0 til 40 °C (32 til 104 °F). La prøven komme til 15 til 25 °C og mål på nytt.","paOut":"Så mye potensiell alkohol kan ingen most holde. Velg et lavere mål."},"lowConfidence":"Prøven for {what} er utenfor 10 til 35 °C, så en enklere korreksjon som bare gjelder vann, brukes. La prøven komme til 15 til 25 °C for en sikrere måling.","potential":"Potensiell alkohol","highPa":"Over omtrent 15 % stopper de fleste gjærtyper før sukkeret er brukt opp, så resultatet blir søtt.","stepFeed":"Til mjød tilsetter mange en del av honningen ved start og resten i flere omganger. Før inn hver tilsetning: kalkulatoren for alkoholprosent regner den med.","honeyAmount":"Honning","waterAmount":"Vann","howTargetSugar":"{pa} % potensiell alkohol × 16,83 g/L = {sugar} g/L gjærbart sukker, som nås ved {target} i en most av sukker eller honning.","howTargetOiv":"{pa} % potensiell alkohol × 16,83 g/L = {sugar} g/L sukker, som OIV-tabell II setter til {target} for drue- eller fruktmost.","srcSugar":"NBS C440 Brix-kurve (massebalanse), honningens sammensetning fra National Honey Board, OIV 16,83 g/L per % vol","srcOiv":"OIV-MA-AS2-02 tabell II, OIV 16,83 g/L per % vol","ogShort":"OG","fgShort":"FG","howTemp":"{what} {from} korrigert for temperatur: {to}.","needVolume":"Fyll inn satsens volum for å regne med sukkeret eller honningen du tilsatte.","howEffective":"OG {og} pluss {added} tilsatt ({solids} g oppløst tørrstoff) = effektiv OG {eff}.","abvH":"Alkohol","abvWhat":"{formula}, valgt for {must}.","formulas":{"standard":"Standardformelen","alternate":"Den alternative formelen","balling":"Ballings formel"},"attenuation":"Tilsynelatende forgjæringsgrad","refractometer":"Hvis denne sluttmålingen kommer fra et refraktometer, viser den for høyt når det er alkohol i vinen. Bruk hydrometer.","howStandard":"({og} − {fg}) × 131,25 = {abv} % vol.","howAlternate":"76,08 × ({og} − {fg}) / (1,775 − {og}) × {fg} / 0,794 = {abv} % vol.","srcStandard":"Standardformel (OG − FG) × 131,25; utbytteområde AWRI s1809","srcAlternate":"Hall, Zymurgy 1995 (alternativ formel); utbytteområde AWRI s1809"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">Slik regnes det ut</h2>
+<h3>To formler, og når du bruker hvilken</h3>
+<p><strong>Standardformelen</strong> er alkohol % = (OG − FG) × 131,25. <strong>Den alternative formelen</strong> (Hall, 1995) er alkohol % = 76,08 × (OG − FG) / (1,775 − OG) × FG / 0,794. De gir nesten det samme ved lav egenvekt og glir fra hverandre over omtrent 1,070.</p>
+<p>Jeg sammenlignet begge med sukkeret som faktisk er i mosten. For drue-, frukt- og sidermost er standardformelen nærmest (gjennomsnittlig feil 0,24 % mot OIVs potensielle alkohol fra 1,080 til 1,110), fordi saften har 8 til 12 % tørrstoff som ikke er sukker. For mjød og sukkervin er den alternative formelen nærmest: fra 1,100 til 0,996 gir den 14,7 %, der standardformelen sier 13,7 %. Det er den kjente «mjøden min er sterkere enn kalkulatoren sier».</p>
+<h3>Sukker eller honning tilsatt underveis</h3>
+<p>Hvert gram du tilsetter etter OG-målingen, øker egenvekten gjæren egentlig startet fra. Demijohn regner ut en effektiv OG med massebalanse: satsen som mostens masse og oppløst tørrstoff fra NBS-kurven for Brix, pluss tørrstoffet i hver tilsetning (sukker 100 %, honning 82,8 %). Alkoholprosenten regnes så ut fra denne effektive OG-en.</p>
+<h3>Temperatur</h3>
+<p>Et hydrometer viser bare riktig ved temperaturen det er kalibrert for. Målingene korrigeres med NBS-tabell 110 for sukkerløsninger før alkoholprosenten regnes ut. Et eksempel: 1,080 målt ved 27 °C på et hydrometer kalibrert ved 20 °C blir 1,082.</p>
+<h3>Målinger med refraktometer</h3>
+<p>Når det er alkohol i vinen, viser et refraktometer for høyt, så en FG fra refraktometeret rett inn i en formel for alkoholprosent blir feil. Bruk hydrometer til sluttmålingen, eller refraktometerkorrigeringen i appen (Terrills formel, med varsel utenfor området den er tilpasset).</p>
+<h3>Hvor sikkert er tallet?</h3>
+<p>Alkoholprosenten er alltid et anslag. Gjær gjør 16,5 til 17,2 g/L sukker om til 1 % alkohol (AWRI), så les resultatet som ±2 % av seg selv. Over omtrent 1,130 spriker de tre formlene med mer enn 1 % vol, og kalkulatoren sier fra.</p>
+
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">I appen</h2>
+<p>I Demijohn ligger OG, hver måling og hver tilsetning av sukker eller honning allerede i satsen, så alkoholprosent og forgjæringsgrad oppdateres for hver måling, og honning i flere omganger regnes med uten at du gjør noe.</p>
+<p class="small">Gratis: ubegrenset antall satser og målinger, og denne kalkulatoren. Pro er én betaling, ingen abonnement. Ingen konto, fungerer uten nett.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn&amp;listing=kit-wine"><small>Google Play</small><b>Kommer snart</b></a><span class="store soon"><small>App Store</small><b>Kommer senere</b></span></div>
+</aside>
+<h2>Kilder</h2>
+<ol class="sources"><li>Hall, M. L., “Brew by the Numbers”, Zymurgy, Summer 1995 (alternate ABV formula)</li><li><a href="https://www.seanterrill.com/2011/04/07/refractometer-fg-results/" rel="noopener">Terrill, S., refractometer and FG calculator v3.0 (Balling ABV)</a></li><li><a href="https://www.oiv.int/node/1905/download/pdf" rel="noopener">OIV, alcoholic strength by volume (ethanol 789.24 kg/m³ at 20 °C)</a></li><li><a href="https://www.awri.com.au/wp-content/uploads/2018/04/s1809.pdf" rel="noopener">AWRI, sugar to alcohol conversion: 16.5 to 17.2 g/L per % vol</a></li><li><a href="https://en.wikipedia.org/wiki/Brix" rel="noopener">Wikipedia, “Brix”: NBS cubic fit for SG and °Bx, Buhl (2023) fit for °P</a></li><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li></ol>
+<p class="callout">Dosene er anslag. Tilsett litt om gangen, mål på nytt og følg produsentens anvisning. Kun til eget bruk.</p>
+<p class="updated">Sjekket mot kildene: 25. oktober 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Denne siden på:</span> <a href="../../abv/" hreflang="en" lang="en">English</a><a href="../../de/alkoholgehalt-berechnen/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calcul-degre-alcool/" hreflang="fr" lang="fr">Français</a><a href="../../nl/alcoholpercentage-berekenen/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/calcolo-gradazione/" hreflang="it" lang="it">Italiano</a><a href="../../es/calcular-grado-alcohol/" hreflang="es" lang="es">Español</a><a href="../../pl/blg-na-alkohol/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/rakna-ut-alkoholhalt/" hreflang="sv" lang="sv">Svenska</a><a href="../../fi/alkoholiprosentti/" hreflang="fi" lang="fi">Suomi</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Dosene er anslag. Tilsett litt om gangen, mål på nytt og følg produsentens anvisning. Kun til eget bruk.</p>
+<p>Demijohn er en satslogg og kalkulator for hjemmelaget vin, mjød og sider, laget av Mufatech. Nettstedet setter ingen informasjonskapsler og laster ingenting fra andre servere.</p>
+<nav aria-label="Nettsted"><a href="../../nb/">Demijohn</a><a href="../../nb/alkoholprosent/">Kalkulator</a><a href="../../nb/support/">Hjelp</a><a href="../../nb/privacy/">Personvern</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>

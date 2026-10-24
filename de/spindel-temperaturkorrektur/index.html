@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Temperaturkorrektur für Spindel und Mostwaage</title>
+<meta name="description" content="Spindel- oder Mostwaagen-Messwert auf die Probentemperatur korrigieren, für 20 °C oder 60 °F. Mit der NBS-Tabelle für Zuckerlösungen, nicht für Wasser.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://mufa-tech.github.io/demijohn/de/spindel-temperaturkorrektur/">
+<link rel="alternate" hreflang="en" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="alternate" hreflang="de" href="https://mufa-tech.github.io/demijohn/de/spindel-temperaturkorrektur/">
+<link rel="alternate" hreflang="pl" href="https://mufa-tech.github.io/demijohn/pl/korekta-temperatury-cukromierza/">
+<link rel="alternate" hreflang="x-default" href="https://mufa-tech.github.io/demijohn/hydrometer-temperature/">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preload" href="../../assets/fonts/AtkinsonHyperlegibleNext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/YoungSerif.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demijohn">
+<meta property="og:title" content="Temperaturkorrektur für Spindel und Mostwaage">
+<meta property="og:description" content="Spindel- oder Mostwaagen-Messwert auf die Probentemperatur korrigieren, für 20 °C oder 60 °F. Mit der NBS-Tabelle für Zuckerlösungen, nicht für Wasser.">
+<meta property="og:url" content="https://mufa-tech.github.io/demijohn/de/spindel-temperaturkorrektur/">
+<meta property="og:image" content="https://mufa-tech.github.io/demijohn/assets/og-de.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../de/"><img src="../../assets/icon.svg" alt="" width="32" height="32">Demijohn</a>
+<nav class="main" aria-label="Hauptmenü"><a href="../../de/rechner/" aria-current="page">Rechner</a><a href="../../de/met-selber-machen/">Met-Anleitung</a><a href="../../de/support/">Hilfe</a></nav>
+<details class="langpick"><summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg><span>DE</span></summary><nav aria-label="Sprache"><a href="../../hydrometer-temperature/" hreflang="en" lang="en">English</a><a href="../../de/spindel-temperaturkorrektur/" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="../../fr/" hreflang="fr" lang="fr">Français</a><a href="../../nl/" hreflang="nl" lang="nl">Nederlands</a><a href="../../it/" hreflang="it" lang="it">Italiano</a><a href="../../es/" hreflang="es" lang="es">Español</a><a href="../../pl/korekta-temperatury-cukromierza/" hreflang="pl" lang="pl">Polski</a><a href="../../sv/" hreflang="sv" lang="sv">Svenska</a><a href="../../nb/" hreflang="nb" lang="nb">Norsk bokmål</a><a href="../../fi/" hreflang="fi" lang="fi">Suomi</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="wrap">
+<p class="crumb"><a href="../../de/">Demijohn</a> / <a href="../../de/rechner/">Rechner</a></p>
+<h1>Spindel richtig ablesen: Temperaturkorrektur</h1>
+<p class="lead">Eine Spindel zeigt nur bei der Temperatur richtig an, auf die sie geeicht ist, meist 20 °C. Gib Messwert und Probentemperatur ein und du bekommst die korrigierte Dichte. Beispiel: 1,080 bei 27 °C auf einer 20-°C-Spindel sind in Wahrheit 1,082.</p>
+<div class="calc">
+<form class="panel" id="calc-form" data-calc="hydro" novalidate>
+<div class="field "><label for="reading">Messwert der Spindel</label>
+<div class="joined"><input id="reading" name="reading" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="80" required aria-describedby="reading-hint reading-err"><select id="reading-scale" name="reading-scale" aria-label="Dichteskala"><option value="oechsle" selected>°Öchsle</option><option value="sg">SG</option><option value="kmw">KMW (°Babo)</option><option value="brix">°Brix</option><option value="baume">°Baumé</option></select></div>
+<span class="hint" id="reading-hint">Unten am Meniskus abgelesen.</span><span class="err" id="reading-err" hidden></span></div>
+<div class="field "><label for="temp">Temperatur der Probe</label>
+<div class="joined"><input id="temp" name="temp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="27" required aria-describedby="temp-hint temp-err"><select id="t-unit" name="t-unit" aria-label="Temperatureinheit"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
+<span class="hint" id="temp-hint">In der Probe gemessen, nicht im Raum.</span><span class="err" id="temp-err" hidden></span></div>
+<fieldset class="choice"><legend>Bezugstemperatur der Spindel</legend><div class="pills"><label class="pill"><input type="radio" name="cal" value="20" checked><span>20 °C (68 °F)</span></label><label class="pill"><input type="radio" name="cal" value="15.555555555555555"><span>60 °F (15,6 °C)</span></label><label class="pill"><input type="radio" name="cal" value="15"><span>15 °C (59 °F)</span></label></div></fieldset>
+</form>
+<section class="results" aria-labelledby="res-h">
+<h2 id="res-h" class="sr">Ergebnis</h2>
+<div id="calc-nojs" class="callout"><p>Dieser Rechner braucht JavaScript. Unten steht, wie du es von Hand rechnest.</p></div>
+<div id="res" class="res-card card" aria-live="polite" hidden></div>
+<p class="note">Läuft in deinem Browser. Was du eingibst, wird weder gesendet noch gespeichert.</p>
+</section>
+</div>
+<script type="application/json" id="calc-i18n">{"locale":"de-DE","decimal":",","units":{"volume":"L","temp":"C"},"scales":{"sg":"SG","brix":"°Brix","balling":"°Balling","plato":"°Plato","oechsle":"°Öchsle","kmw":"KMW (°Babo)","baume":"°Baumé"},"defaultScale":"oechsle","musts":{"grape":"Traubenwein","fruit":"Obstwein","cider":"Apfelwein oder Perry","mead":"Met","sugar":"Zuckeransatz"},"sweet":{"sugar":"Zucker","honey":"Honig"},"unitNames":{"L":"Liter","usgal":"US-Gallonen","impgal":"britische Gallonen"},"disclaimer":"Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.","volPct":"% vol","litreSym":"L","scaleUnits":{"sg":"","brix":"°Bx","balling":"°Blg","plato":"°P","oechsle":"°Oe","kmw":"°KMW","baume":"°Bé"},"flags":{"warn":"Warnung","stop":"Stopp","info":"Hinweis","good":"OK"},"howTitle":"So wurde gerechnet","sourceLabel":"Quelle","fillIn":"Füll die Felder aus, dann erscheint das Ergebnis.","fixErrors":"Korrigiere die markierten Felder oben, dann erscheint das Ergebnis.","errNumber":"Gib eine Zahl ein, zum Beispiel {example}.","errRange":"Nimm einen Wert von {min} bis {max}.","errGravity":"Auf der Skala {scale} rechnet dieser Rechner von {min} bis {max}.","issues":{"outOfRange":"Das liegt außerhalb des Bereichs, für den die Formel gilt.","invalidInput":"Einer der Werte lässt sich hier nicht verwenden.","fgAboveOg":"Die letzte Messung liegt über der Startdichte. Prüf beide Werte und die Skala.","extrapolated":"Unter 1,000 ist die Brix-Kurve nur verlängert. Verlass dich auf den SG-Wert.","formulasDisagree":"Bei dieser Startdichte liegen die Formeln mehr als 1 % vol auseinander. Lies das Ergebnis als Spanne.","honeyMoistureUnusual":"Dieser Wassergehalt liegt außerhalb der 13,4 bis 22,9 %, die in Honiguntersuchungen gemessen wurden. Prüf die Messung.","alreadyAboveTarget":"Der Most liegt schon auf oder über diesem Ziel. Es muss nichts dazu.","targetBelowCurrent":"Das Ziel liegt unter der jetzigen Dichte.","tempOut":"{what}: Die Temperatur liegt außerhalb von 0 bis 40 °C (32 bis 104 °F). Bring die Probe auf 15 bis 25 °C und miss noch einmal.","paOut":"So viel potenziellen Alkohol kann ein Most nicht haben. Nimm ein niedrigeres Ziel."},"lowConfidence":"{what}: Die Probe liegt außerhalb von 10 bis 35 °C, deshalb wird eine einfachere Korrektur nur nach Wasser verwendet. Bring die Probe auf 15 bis 25 °C, dann wird der Wert genauer.","potential":"Potenzieller Alkohol","highPa":"Über etwa 15 % hören die meisten Hefen auf, bevor der Zucker weg ist. Das Ergebnis bleibt dann süß.","stepFeed":"Beim Met geben viele einen Teil des Honigs am Anfang zu und den Rest in Etappen. Trag jede Zugabe ein: Der Alkoholrechner zählt sie mit.","honeyAmount":"Honig","waterAmount":"Wasser","howTargetSugar":"{pa} % vol potenzieller Alkohol × 16,83 g/L = {sugar} g/L vergärbarer Zucker, erreicht bei {target} in einem Zucker- oder Honigmost.","howTargetOiv":"{pa} % vol potenzieller Alkohol × 16,83 g/L = {sugar} g/L Zucker, laut OIV-Tabelle II bei {target} für Trauben- oder Obstmost.","srcSugar":"NBS C440 Brix-Kurve (Massenbilanz), National Honey Board Honigzusammensetzung, OIV 16,83 g/L je % vol","srcOiv":"OIV-MA-AS2-02 Tabelle II, OIV 16,83 g/L je % vol","reading":"Messwert","correctedH":"Korrigierter Messwert","correctedWhat":"Bei der Bezugstemperatur von {cal}.","calNames":{"15":"15 °C","20":"20 °C","15.555555555555555":"60 °F"},"asSg":"Als SG","change":"Korrektur","pointsWord":"Punkte","above35":"Über 35 °Brix wird die letzte Spalte der Tabelle verwendet.","howNbs":"Messwert = {bx} °Bx. NBS-Tabelle 110: {cs} bei Probentemperatur, {cc} bei Bezugstemperatur. {bx} {cs} − ({cc}) = {bc} °Bx = {sg}.","howWater":"{r} × Wasserdichte bei Bezugstemperatur {a} / Wasserdichte bei Probentemperatur {b} = {sg}.","srcNbs":"NBS Circular C440 Tabelle 110; gegengeprüft mit OIV-MA-AS2-01B Tabelle VI","srcWater":"Wasserdichte, Tanaka et al. 2001"}</script>
+
+<div class="prose gap-top">
+<h2 id="method">So wird gerechnet</h2>
+<h3>Warum überhaupt korrigieren</h3>
+<p>Warme Flüssigkeit dehnt sich aus und wird leichter, die Spindel sinkt tiefer ein und zeigt zu wenig an. Kalte Flüssigkeit zeigt zu viel an. Auch das Glas der Spindel dehnt sich ein wenig aus.</p>
+<h3>Warum nicht die übliche Formel</h3>
+<p>Die meisten Rechner nehmen eine Formel, die an die Ausdehnung von reinem Wasser angepasst ist. Zuckerlösungen dehnen sich stärker aus als Wasser. Bei Mostdichten korrigiert diese Formel deshalb 0,2 bis 0,5 Punkte zu wenig, wenn die Probe 5 bis 10 Grad danebenliegt. Demijohn nimmt die NBS-Tabelle 110, gemessen an Zuckerlösungen von 0 bis 35 % Zucker und 10 bis 35 °C, das Glas schon eingerechnet. Zwischen den Zeilen wird interpoliert.</p>
+<p>Für eine Spindel mit 60 °F (15,56 °C) oder einer anderen Bezugstemperatur wird die Tabellenkorrektur bei deren Bezugstemperatur abgezogen. So steht es als Umrechnungsregel unter der NBS-Tabelle.</p>
+<h3>Außerhalb von 10 bis 35 °C</h3>
+<p>Von 0 bis 10 °C und von 35 bis 40 °C gibt es keine Tabelle. Dann wird mit dem Verhältnis der Wasserdichten gerechnet und das Ergebnis als weniger sicher markiert. Außerhalb von 0 bis 40 °C hört der Rechner auf: Bring die Probe auf 15 bis 25 °C und miss noch einmal.</p>
+<h3>Fertiger Wein</h3>
+<p>Auch Alkohol dehnt sich stärker aus als Wasser. Bei 5 Grad Abweichung fehlen der Korrektur für einen fertigen trockenen Wein etwa 0,3 Punkte. Das ist weniger, als die meisten Hobby-Spindeln anzeigen können. Fertigen Wein misst du trotzdem am besten nahe der Bezugstemperatur.</p>
+<nav class="next" aria-label="Nächste Frage"><p class="next-h">Nächste Frage</p><ul><li><a href="../../de/alkoholgehalt-berechnen/">Alkohol aus Start- und Enddichte<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../de/oechsle-tabelle/">Öchsle-Tabelle und Skalen<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
+<aside class="card app-note gap-top" aria-labelledby="app-h">
+<h2 id="app-h" class="h3">In der App</h2>
+<p>In Demijohn tippst du die Temperatur mit dem Messwert ein, die Korrektur läuft beim Tippen mit. Die Bezugstemperatur jeder Spindel speicherst du einmal und wählst sie nie wieder neu.</p>
+<p class="small">Kostenlos: unbegrenzt Ansätze und Messungen, alle diese Rechner. Pro zahlst du einmal, kein Abo. Kein Konto, läuft offline.</p>
+<div class="stores"><a class="store soon" href="https://play.google.com/store/apps/details?id=com.mufatech.demijohn&amp;listing=de-forum"><small>Google Play</small><b>Bald verfügbar</b></a><span class="store soon"><small>App Store</small><b>Kommt später</b></span></div>
+</aside>
+<h2>Quellen</h2>
+<ol class="sources"><li><a href="https://archive.org/details/circularofbureau440bate" rel="noopener">Bates et al., NBS Circular C440 (1942), Tables 109, 110 and 114</a></li><li><a href="https://www.oiv.int/public/medias/2468/oiv-ma-as2-01b.pdf" rel="noopener">OIV-MA-AS2-01B, Tables V and VI: hydrometer temperature corrections</a></li><li><a href="https://doi.org/10.1088/0026-1394/38/4/3" rel="noopener">Tanaka et al., Metrologia 38 (2001) 301: density of water</a></li></ol>
+<p class="callout">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+<p class="updated">Mit den Quellen abgeglichen: 25. Oktober 2026</p>
+</div>
+</div>
+<div class="wrap"><p class="also-in"><span>Diese Seite auf:</span> <a href="../../hydrometer-temperature/" hreflang="en" lang="en">English</a><a href="../../pl/korekta-temperatury-cukromierza/" hreflang="pl" lang="pl">Polski</a></p></div>
+</main>
+<footer><div class="wrap">
+<p class="disclaimer">Dosierungen sind Schätzwerte. In Schritten zugeben, erneut messen, Herstellerangaben beachten. Nur für den Eigenbedarf.</p>
+<p>Demijohn ist Gärprotokoll und Rechner für Wein, Met und Apfelwein zu Hause, von Mufatech. Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.</p>
+<nav aria-label="Seite"><a href="../../de/">Demijohn</a><a href="../../de/rechner/">Rechner</a><a href="../../de/support/">Hilfe</a><a href="../../de/privacy/">Datenschutz</a><a href="mailto:hello@mufatech.com">hello@mufatech.com</a></nav>
+</div></footer>
+<script type="module" src="../../assets/calc-ui.js"></script>
+</body>
+</html>
