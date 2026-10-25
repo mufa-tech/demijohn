@@ -45,12 +45,12 @@
 <div class="wrap">
 <p class="crumb"><a href="../../pl/">Demijohn</a> / <a href="../../pl/kalkulatory/">Kalkulatory</a></p>
 <h1>Korekta odczytu cukromierza według temperatury</h1>
-<p class="lead">Cukromierz pokazuje prawdę tylko w temperaturze, na którą jest wyskalowany, zwykle 20 °C. Wpisz odczyt i temperaturę próbki, a dostaniesz poprawioną gęstość.</p>
+<p class="lead">Cukromierz pokazuje dokładnie tylko w temperaturze, na którą jest wyskalowany, zwykle 20 °C. Wpisz odczyt i temperaturę próbki, a dostaniesz poprawioną gęstość.</p>
 <div class="calc">
 <form class="panel" id="calc-form" data-calc="hydro" novalidate>
 <div class="field "><label for="reading">Odczyt cukromierza</label>
 <div class="joined"><input id="reading" name="reading" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="19,3" required aria-describedby="reading-hint reading-err"><select id="reading-scale" name="reading-scale" aria-label="Skala gęstości"><option value="balling" selected>Blg (Balling)</option><option value="sg">SG</option><option value="brix">°Brix</option><option value="oechsle">°Oechsle</option></select></div>
-<span class="hint" id="reading-hint">Odczytany na dole menisku.</span><span class="err" id="reading-err" hidden></span></div>
+<span class="hint" id="reading-hint">Odczytaj na dole menisku, chyba że instrukcja cukromierza każe u góry.</span><span class="err" id="reading-err" hidden></span></div>
 <div class="field "><label for="temp">Temperatura próbki</label>
 <div class="joined"><input id="temp" name="temp" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="27" required aria-describedby="temp-hint temp-err"><select id="t-unit" name="t-unit" aria-label="Jednostka temperatury"><option value="C" selected>°C</option><option value="F">°F</option></select></div>
 <span class="hint" id="temp-hint">Zmierzona w próbce, nie w pokoju.</span><span class="err" id="temp-err" hidden></span></div>
@@ -70,12 +70,12 @@
 <h3>Po co w ogóle korekta</h3>
 <p>Ciepły płyn rozszerza się i robi się lżejszy, więc cukromierz zanurza się głębiej i pokazuje za mało. Zimny płyn pokazuje za dużo. Szkło cukromierza też trochę się rozszerza.</p>
 <h3>Dlaczego nie zwykły wzór</h3>
-<p>Większość kalkulatorów używa wzoru dopasowanego do rozszerzalności czystej wody. Roztwory cukru rozszerzają się bardziej niż woda, więc przy gęstości moszczu taki wzór poprawia za mało, o 0,2 do 0,5 punktu, gdy próbka odbiega o 5 do 10 stopni. Demijohn używa tabeli NBS 110, zmierzonej dla roztworów cukru od 0 do 35 % cukru i od 10 do 35 °C, z uwzględnieniem szkła. Między wierszami tabela jest interpolowana.</p>
+<p>Większość kalkulatorów używa wzoru dopasowanego do rozszerzalności czystej wody. Roztwory cukru rozszerzają się bardziej niż woda, więc przy gęstości moszczu taki wzór poprawia za mało, o 0,0002 do 0,0005 SG, gdy próbka odbiega o 5 do 10 stopni. Demijohn używa tabeli NBS 110, zmierzonej dla roztworów cukru od 0 do 35 % cukru i od 10 do 35 °C, z uwzględnieniem szkła. Między wierszami tabela jest interpolowana.</p>
 <p>Dla cukromierza na 60 °F lub inną temperaturę odejmuje się korektę z tabeli dla jego temperatury skalowania, zgodnie z zasadą podaną pod tabelą NBS.</p>
 <h3>Poza zakresem 10 do 35 °C</h3>
 <p>Od 0 do 10 °C i od 35 do 40 °C tabeli nie ma, więc używa się stosunku gęstości wody, a wynik jest oznaczony jako mniej pewny. Poza 0 do 40 °C kalkulator się zatrzymuje: doprowadź próbkę do 15 do 25 °C i zmierz ponownie.</p>
 <h3>Gotowe wino</h3>
-<p>Alkohol też rozszerza się bardziej niż woda. Przy 5 stopniach różnicy korekta dla wytrawnego, gotowego wina jest za mała o ok. 0,3 punktu. To mniej, niż pokaże większość domowych cukromierzy, ale gotowe wino mierz w miarę możliwości blisko temperatury skalowania.</p>
+<p>Alkohol też rozszerza się bardziej niż woda. Przy 5 stopniach różnicy korekta dla wytrawnego, gotowego wina jest za mała o ok. 0,0003 SG. To mniej, niż pokaże większość domowych cukromierzy, ale gotowe wino mierz w miarę możliwości blisko temperatury skalowania.</p>
 <nav class="next" aria-label="Następne pytanie"><p class="next-h">Następne pytanie</p><ul><li><a href="../../pl/blg-na-alkohol/">Blg na alkohol<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li><li><a href="../../pl/tabela-blg/">Tabela Blg i skale<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ul></nav>
 <aside class="card app-note gap-top" aria-labelledby="app-h">
 <h2 id="app-h" class="h3">W aplikacji</h2>
